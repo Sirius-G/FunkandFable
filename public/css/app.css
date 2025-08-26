@@ -1,0 +1,129 @@
+
+/* -- Branding -- Set Vars -- */
+:root {
+  --primary-bg: #8ca784;
+  --secondary-bg: #ffffff;
+  --primary-text: #000000;
+  --secondary-text: #ffffff;
+
+  --wave-color: #8ca784;   /* wave color */
+  --wave-h: 40px;         /* wave height */
+  --wave-repeat-w: 2000px;  /* tile width for smoother variation */
+}
+.primary-section {
+  background-color: var(--primary-bg);
+}
+.secondary-section {
+  background-color: var(--secondary-bg);
+}
+
+/* -- Branding Text and Fonts -- */
+/* Georgia Regular */
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Georgia Bold */
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiab.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+/* Georgia Italic */
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiai.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+/* Georgia Bold Italic */
+@font-face {
+  font-family: 'Georgia';
+  src: url('/fonts/georgiaz.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+.logo_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: bold;
+  font-size: 80px;
+}
+.nav_logo_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.fabled_feedback_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: normal;
+  font-size: 50px;    
+}
+.content_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: normal;
+  font-size: 20px;    
+}
+
+
+/* -- Nav bar -- */
+img .nav-logo {
+    height: 50px !important;
+}
+
+
+
+
+/* -- Sections with green wavy edges top or bottom -- */
+section {
+    padding: 3rem 1rem;
+    position: relative;
+}
+/* Base wave strips */
+.wave-top::before,
+.wave-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: var(--wave-h);
+    background-repeat: repeat-x;
+    background-size: var(--wave-repeat-w) 100%;
+    pointer-events: none;
+}
+/* random top wave */
+.wave-top::before {
+    top: calc(-1 * var(--wave-h));
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 100' preserveAspectRatio='none'>\
+    <path d='M0,100 \
+        C50,60 120,140 200,80 \
+        C280,20 360,160 440,70 \
+        C520,-10 580,120 600,60 \
+        L600,0 L0,0 Z' fill='%238ca784'/>\
+    </svg>");
+    transform: rotate(180deg);
+}
+
+/* random bottom wave */
+.wave-bottom::after {
+    bottom: calc(-1 * var(--wave-h));
+    background-image: url("data:image/svg+xml;utf8,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 100' preserveAspectRatio='none'>\
+    <path d='M0,0 \
+        C50,40 120,-40 200,30 \
+        C280,100 360,-20 440,50 \
+        C520,120 580,-30 600,40 \
+        L600,100 L0,100 Z' fill='%238ca784'/>\
+    </svg>");
+    transform: rotate(180deg);
+}
+
+.footer {
+    background-color: var(--primary-bg) !important;
+    color: var(--secondary-text);
+    text-align: center;
+    height: 80px;
+}
