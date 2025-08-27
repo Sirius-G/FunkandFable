@@ -10,11 +10,31 @@
   --wave-h: 40px;         /* wave height */
   --wave-repeat-w: 2000px;  /* tile width for smoother variation */
 }
+
+html, body {
+  height: 100%;            /* Make sure the page takes full height */
+  margin: 0;               /* Remove default margins */
+}
+
+body {
+  display: flex;           /* Use flex layout */
+  flex-direction: column;  /* Stack content vertically */
+  min-height: 100vh;       /* Full viewport height */
+}
+
+main {
+  flex: 1;                 /* Push footer to bottom if content is short */
+}
+
 .primary-section {
   background-color: var(--primary-bg);
 }
 .secondary-section {
   background-color: var(--secondary-bg);
+}
+
+.greenheader {
+    background-color: var(--primary-bg) !important;
 }
 
 /* -- Branding Text and Fonts -- */
@@ -50,6 +70,11 @@
   font-family: 'Georgia', Georgia, serif;
   font-weight: bold;
   font-size: 80px;
+}
+.sub_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: normal;
+  font-size: 40px;
 }
 .nav_logo_text {
   font-family: 'Georgia', Georgia, serif;

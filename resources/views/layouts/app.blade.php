@@ -31,16 +31,12 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-            @include('inc.nav')
-            @include('inc.messages')
-        <main class="py-4 my-4">
-            @yield('content')
-        </main>
-        <div class="m-y-4">
-            @include('inc.footer')
-        </div>
-    </div>
+    @include('inc.nav')
+    @include('inc.messages')
+    <main class="py-4 my-4">
+        @yield('content')
+    </main>
+    @include('inc.footer')
 
     <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">

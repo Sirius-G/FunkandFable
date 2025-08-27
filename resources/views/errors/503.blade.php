@@ -1,9 +1,10 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <img src="images/logofull.png" style="position: absolute; left: 50%; top: 50px; margin-left: -150px; width: 300px;">
-    <div class="card" style="position: relative; margin-top: 400px;">
+<div class="container text-center">
+    <div class="logo_text">Funk and Fable</div>
+    <div class="sub_text mb-4">Professional Acoustic Band</div>
+    <div class="card mt-4">
         <div class="card-header greenheader">
             <strong class="text-white">{{ __('503 Error') }}</strong>
 
