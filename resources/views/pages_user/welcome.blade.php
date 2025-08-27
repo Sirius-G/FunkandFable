@@ -1,36 +1,33 @@
-@extends('layouts.app')
+@extends('layouts.loadingpage')
 
 @section('content')
-        <div class="container">
-
-  
-                    <h1 class="logo_text">Funk & Fable</h1>
-                    <br><br><br><br>
-                     <h2 class="fabled_feedback_text">Fabled Feedback</h2>
-
-                                         <br><br><br><br>
-                     <p class="content_text">
-I'd highly recommend Stellar Acoustics. I hired Beth and Connor for a private party. Their communication was excellent leading up to the event which included any preferences for the set list. Professional and friendly, they were so easy going and performed from a range of genres (something for everyone) adding in plenty of my favourites! Guests were really impressed with their sound and Beth's vocals. They were also really engaging with the guests and provided a relaxed atmosphere on a hot afternoon. I'd most definitely book Stellar Acoustics again.</p>
-
+<div class="logocontainer">
+    <div class="cover">
+      <h1 class="logo_text text">Funk & Fable</h1>
+      <p class="logo_sub_text_white sub_text">Professional Acoustic Band</p>
+    </div>
+</div>
+<div id="progress-bar-container">
+    <div id="progress-bar"></div>
 </div>
 
+<script>
+    const progressBar = document.getElementById("progress-bar");
 
-  <!-- Section with soft, random top wave -->
-  <section class="secondary-section wave-top">
-    <h1>Soft Random Wave Top</h1>
-    <p>This wave edge is smooth and flowing, perfect for a modern, artsy vibe.</p>
-  </section>
+    // Kick off animation shortly after page load
+    window.onload = () => {
+      progressBar.style.width = "100%";
 
-  <!-- Section with soft, random bottom wave -->
-  <section class="secondary-section wave-bottom">
-    <h2>Soft Random Wave Bottom</h2>
-    <p>The organic curve blends sections naturally, avoiding sharp transitions.</p>
-  </section>
+      // Start fade-out just before redirect
+      setTimeout(() => {
+        document.body.classList.add("fade-out");
+      }, 2500); // allow full bar to show
 
+      // Redirect after fade
+      setTimeout(() => {
+        window.location.href = "/home";
+      }, 3000); // total duration = 3 seconds
+    };
+  </script>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-            
 @endsection

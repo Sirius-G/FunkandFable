@@ -32,8 +32,6 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    @include('inc.nav')
-    @include('inc.messages')
     <main class="py-4 my-4">
         @yield('content')
     </main>
