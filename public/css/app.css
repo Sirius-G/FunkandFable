@@ -84,6 +84,16 @@ main {
   font-size: 20px;
   color: var(--primary-text);
 }
+.inform_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: bold;
+  font-size: 35px;
+}
+.inform_sub_text {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
 .nav_logo_text {
   font-family: 'Georgia', Georgia, serif;
   font-weight: bold;
