@@ -14,6 +14,7 @@
 html, body {
   height: 100%;            /* Make sure the page takes full height */
   margin: 0;               /* Remove default margins */
+  font-family: 'Georgia', Georgia, serif;
 }
 
 body {
