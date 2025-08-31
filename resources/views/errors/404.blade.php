@@ -18,7 +18,7 @@ session()->put('uri', $_SERVER['REQUEST_URI']);
                 <p>...redirecting, please wait!</p>
             </div>  
         </div>
-    <br><br><br>
+    <br><br><br><br><br><br>
 </div>
 <script>
     setTimeout(function(){

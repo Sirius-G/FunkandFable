@@ -20,11 +20,11 @@ html, body {
 body {
   display: flex;           /* Use flex layout */
   flex-direction: column;  /* Stack content vertically */
-  min-height: 100vh;       /* Full viewport height */
 }
 
 main {
   flex: 1;                 /* Push footer to bottom if content is short */
+  min-height: 100vh;       /* Full viewport height */
 }
 
 .primary-section {
@@ -119,15 +119,41 @@ img .nav-logo {
 .logocontainer {
   position: relative;
   left: 0px;
-  top: -45px;
-  padding-top: 150px;
+  top: 0px;
   background: url("/images/home_banner.jpg");
   background-position: center;
   background-size: cover;
-  height: 90vh;
-  margin-bottom: -110px;
+  background-repeat: no-repeat;
+  height: 100vh;
   z-index: 0;
 }
+
+  /* -- Mobile phone view -- */
+@media (max-width: 768px) {
+    .logostacked{
+        position: relative;
+        width: 60% !important;
+        margin-top: 20%;
+        z-index: 1;
+    }
+    .logolinear {
+      display: none;
+    }
+}
+
+  /* -- Desk top view -- */
+@media (min-width: 769px) {
+    .logolinear {
+        position: relative;
+        width: 45% !important;
+        margin-top: 10%;
+        z-index: 1;
+    }
+    .logostacked {
+      display: none;
+    }
+}
+
 
 .text {
   text-align: center;
@@ -198,6 +224,7 @@ section {
 }
 
 .footer {
+    width: 100%;
     background-color: var(--primary-bg) !important;
     color: var(--secondary-text);
     text-align: center;
