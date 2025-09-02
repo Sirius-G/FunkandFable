@@ -1,9 +1,10 @@
 @extends('layouts.loadingpage')
 
 @section('content')
-<div class="logocontainer">
+<div class="logocontainer text-center">
     <div class="cover">
-      <h1 class="logo_text text">Funk & Fable</h1>
+      <img src="images/svg/F&FLogoLinear.svg" class="logolinear" alt="Funk and Fable logo">
+      <img src="images/svg/F&FLogoStacked.svg" class="logostacked" alt="Funk and Fable logo">
       <p class="logo_sub_text_white sub_text">Professional Acoustic Band</p>
     </div>
 </div>

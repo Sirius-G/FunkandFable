@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg shadow-sm bg-white sticky-top">
+<nav class="navbar navbar-expand-lg shadow-sm sticky-top bgnav secondary-section wave-bottom">
             <div class="container">
                 <a class="navbar-brand item" href="{{ url('/') }}" tabindex="0" title="Funk & Fable Logo and Linked Index" aria-lable="Sycamore Sound Guitar Tuition Logo and Linked Index">
-                    <div class="nav_logo_text"><img src="images/logo_icon.png" alt="Funk & Fable Logo" class"nav-logo" height="50px"> Funk & Fable</div>
+                    <img src="images/svg/F&FLogoLinear.svg" class="nav-logo" alt="Funk and Fable logo"> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

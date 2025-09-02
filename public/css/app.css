@@ -20,6 +20,7 @@ html, body {
 body {
   display: flex;           /* Use flex layout */
   flex-direction: column;  /* Stack content vertically */
+  overflow-x: hidden;
 }
 
 main {
@@ -34,8 +35,34 @@ main {
   background-color: var(--secondary-bg);
 }
 
+.headerimage {
+  height: 500px;           /* Maintain specific height */
+  width: 100vw;             /* Scale width automatically */
+  object-fit: cover;       /* Fill container, crop edges if needed */
+  object-position: center; /* Keep the center of the image visible */
+}
+
+/* White overlay */
+.headerimagecover {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.15); 
+  z-index: 1;
+}
+
 .greenheader {
     background-color: var(--primary-bg) !important;
+}
+
+.instagram-embed {
+  max-width: 540px;
+  margin: 0 auto;
+  border: none;
+  box-shadow: none;
 }
 
 /* -- Branding Text and Fonts -- */
@@ -94,11 +121,6 @@ main {
   font-weight: bold;
   font-size: 20px;
 }
-.nav_logo_text {
-  font-family: 'Georgia', Georgia, serif;
-  font-weight: bold;
-  font-size: 30px;
-}
 .fabled_feedback_text {
   font-family: 'Georgia', Georgia, serif;
   font-weight: normal;
@@ -107,13 +129,35 @@ main {
 .content_text {
   font-family: 'Georgia', Georgia, serif;
   font-weight: normal;
-  font-size: 20px;    
+  font-size: 20px;  
+  padding: 0px 20px;
 }
 
 
 /* -- Nav bar -- */
-img .nav-logo {
-    height: 50px !important;
+img.nav-logo {
+    height: 30px !important;
+}
+
+.bgnav {
+  background-color: var(--primary-bg);  
+}
+
+nav li {
+  color: var(--secondary-text);
+}
+
+.hover-button {
+    background-color: var(--primary-bg) !important;
+    color: var(--secondary-text) !important;
+    border: 1px solid var(--secondary-bg) !important;
+}
+
+.hover-button:hover {
+    background-color: var(--secondary-bg) !important;
+    color: var(--primary-text) !important;
+    border: 1px solid var(--secondary-bg) !important;
+    transition: all 0.3s ease;
 }
 
 .logocontainer {
@@ -133,7 +177,7 @@ img .nav-logo {
     .logostacked{
         position: relative;
         width: 60% !important;
-        margin-top: 20%;
+        margin-top: 25%;
         z-index: 1;
     }
     .logolinear {
@@ -165,6 +209,11 @@ img .nav-logo {
   position: relative;
 }
 
+.bg_primary {
+  background-color: var(--primary-bg);
+  color: var(--secondary-text);
+}
+
 /* White overlay */
 .cover {
   content: "";
@@ -180,9 +229,14 @@ img .nav-logo {
 
 /* -- Sections with green wavy edges top or bottom -- */
 section {
-    padding: 3rem 1rem;
     position: relative;
 }
+
+.section_gap {
+  margin: 80px 0px;
+}
+
+
 /* Base wave strips */
 .wave-top::before,
 .wave-bottom::after {
@@ -195,7 +249,7 @@ section {
     background-size: var(--wave-repeat-w) 100%;
     pointer-events: none;
 }
-/* random top wave */
+/* wave facing up */
 .wave-top::before {
     top: calc(-1 * var(--wave-h));
     background-image: url("data:image/svg+xml;utf8,\
@@ -209,7 +263,7 @@ section {
     transform: rotate(180deg);
 }
 
-/* random bottom wave */
+/* wave facing down */
 .wave-bottom::after {
     bottom: calc(-1 * var(--wave-h));
     background-image: url("data:image/svg+xml;utf8,\
@@ -224,11 +278,14 @@ section {
 }
 
 .footer {
+    position: relative;
     width: 100%;
     background-color: var(--primary-bg) !important;
     color: var(--secondary-text);
     text-align: center;
     height: 80px;
+    padding: 3rem 1rem;
+    margin-top: 100px;
 }
 
 

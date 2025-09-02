@@ -4,7 +4,7 @@ session()->put('uri', $_SERVER['REQUEST_URI']);
 ?>
 
 @section('content')
-<div class="container text-center">
+<div class="container text-center" style="margin-bottom: -200px;">
     <div class="logo_text">Funk and Fable</div>
     <div class="logo_sub_text mb-4">Professional Acoustic Band</div>
     <div class="card mt-4">
@@ -18,7 +18,6 @@ session()->put('uri', $_SERVER['REQUEST_URI']);
                 <p>...redirecting, please wait!</p>
             </div>  
         </div>
-    <br><br><br><br><br><br>
 </div>
 <script>
     setTimeout(function(){
