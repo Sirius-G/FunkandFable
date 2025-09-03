@@ -65,7 +65,7 @@
         <p class="logo_sub_text">A few snaps and videos from recent gigs</p>
             @if(count($insta)>0)
             @foreach($insta as $i)
-            <div class="col-sm-12 col-md-4 col-lg-3">  
+            <div class="col-sm-12 col-md-4 col-lg-3" style="height: 350px !important;">  
               <blockquote class="instagram-media" data-instgrm-permalink="{{$i->url}}"></blockquote>
             </div>  
             @endforeach
