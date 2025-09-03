@@ -61,17 +61,16 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3">
-          <h2 class="inform_text">Check out our Instagram</h2>
-          <p class="logo_sub_text">A few snaps and videos from recent gigs</p>
+        <h2 class="inform_text">Check out our Instagram</h2>
+        <p class="logo_sub_text">A few snaps and videos from recent gigs</p>
+        <div class="col-sm-12 col-md-4 col-lg-3">         
             @if(count($insta)>0)
             @foreach($insta as $i)
               <blockquote class="instagram-media" data-instgrm-permalink="{{$i->url}}"></blockquote>
             @endforeach
             @endif
-          <script async src="https://www.instagram.com/embed.js"></script>
-
         </div>
+        <script async src="https://www.instagram.com/embed.js"></script>
       </div>
     </div>
 
