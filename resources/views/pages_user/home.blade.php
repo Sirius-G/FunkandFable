@@ -44,14 +44,39 @@
     <div class="bg_primary">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12">
           <h2 class="inform_text">Frequently asked questions</h2>
           <p class="logo_sub_text_white">Get to know us even better....</p>
+        </div>        
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">How can I book Funk & Fable?</p>
         </div>
         <div class="col-sm-12 col-md-6">
-              <p class="content_text">
-                I'd highly recommend Stellar Acoustics. I hired Beth and Connor for a private party. Their communication was excellent leading up to the event which included any preferences for the set list. Professional and friendly, they were so easy going and performed from a range of genres (something for everyone) adding in plenty of my favourites! Guests were really impressed with their sound and Beth's vocals. They were also really engaging with the guests and provided a relaxed atmosphere on a hot afternoon. I'd most definitely book Stellar Acoustics again.
-              </p>
+          <hr>
+          <p class="content_text">
+            You can book us by visiting our Contant Us page and submitting an enquiry. We'll get back to you with our availablility and a quote for your requested service!
+          </p>
+        </div>  
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">What services do you offer?</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="content_text">
+            We provide live acoustic music for weddings, private and corporate events across the UK. Our standard line-up consists of acoustic guitar and vocals but we also offer extended line-ups that can include percussion, bass and saxophone. We provide all necessary equipment including PA and lighting. Head to our Services page for detailed information on what we offer.
+          </p>
+        </div>  
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">Can you learn song requests?</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="content_text">
+            Of course! We will always do our best to do your favourite songs justice to help make your event extra special!
+          </p>
         </div>  
       </div>
     </div>
@@ -62,7 +87,7 @@
     <div class="container">
       <div class="row">
         <h2 class="inform_text">Check out our Instagram</h2>
-        <p class="logo_sub_text">A few snaps and videos from recent gigs</p>
+        <p class="logo_sub_text">Feedback, snaps and videos from recent gigs</p>
             @if(count($insta)>0)
             @foreach($insta as $i)
             <div class="col-sm-12 col-md-4 col-lg-3">  
