@@ -61,7 +61,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-md-4 col-lg-3">
           <h2 class="inform_text">Check out our Instagram</h2>
           <p class="logo_sub_text">A few snaps and videos from recent gigs</p>
             @if(count($insta)>0)
