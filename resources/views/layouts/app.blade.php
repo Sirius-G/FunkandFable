@@ -36,6 +36,8 @@
     @include('inc.messages')
     <main>
         @yield('content')
+
+        @include('inc.social')
         @include('inc.footer')
     </main>
 

@@ -40,7 +40,6 @@
 
     <div class="section_gap"></div>
     <section class="secondary-section wave-top"></section>
-   
     <div class="bg_primary">
     <div class="container">
       <div class="row">
@@ -90,7 +89,7 @@
         <p class="logo_sub_text">Feedback, snaps and videos from recent gigs</p>
             @if(count($insta)>0)
             @foreach($insta as $i)
-            <div class="col-sm-12 col-md-4 col-lg-3">  
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">  
               <blockquote class="instagram-media" data-instgrm-permalink="{{$i->url}}"></blockquote>
             </div>  
             @endforeach
@@ -99,6 +98,35 @@
       </div>
     </div>
 
+    <div class="section_gap"></div>
+    <section class="secondary-section wave-top"></section>
+    <div class="bg_primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="inform_text">Testimonials</h2>
+          <p class="logo_sub_text_white">What are people saying about us?</p>
+        </div>        
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">I'd highly recommend Funk & Fable. I hired Beth and Connor for a private party. Their communication was excellent leading up to the event which included any preferences for the set list. Professional and friendly, they were so easy going and performed from a range of genres (something for everyone) adding in plenty of my favourites! Guests were really impressed with their sound and Beth's vocals. They were also really engaging with the guests and provided a relaxed atmosphere on a hot afternoon. I'd most definitely book Funk & Fable again.</p>
+          <p class="logo_sub_text_white">- Rhiannon</p>
+        </div> 
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">We couldn’t be happier with Funk and Fable — they were absolutely fantastic from start to finish! They went above and beyond by learning two special songs just for us, which meant so much and made the day even more memorable. They arrived fully prepared, brought all their own equipment, and set everything up seamlessly without any hassle. At one point, we even put them on the spot with a song request they hadn’t prepared, and they still pulled it off brilliantly — it turned into one of the most unforgettable moments of the day. They were also amazing with the kids, even surprising them with a little 'Frozen' performance that had everyone smiling. Truly professional, talented, and thoughtful — we’re so grateful they were part of our day.</p>
+          <p class="logo_sub_text_white">- Shannon</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <hr>
+          <p class="logo_sub_text_white">Loved watching these guys last night! Great style of music and loved Bethany's voice!</p>
+          <p class="logo_sub_text_white">- Shannon</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+    <section class="secondary-section wave-bottom"></section>
+    <div class="section_gap"></div> 
 
 
     </div>

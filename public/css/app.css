@@ -305,3 +305,21 @@ section {
     background-color: var(--primary-bg);
     transition: width 2.5s linear;
   }
+
+  .social-bar {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  gap: 30px;               /* spacing between icons */
+  padding: 0;
+  margin: 0;
+}
+
+.social-bar li {
+  display: inline-block;
+}
+
+.social-bar img {
+  width: 50px; /* ensures consistent size */
+  height: auto;
+}
