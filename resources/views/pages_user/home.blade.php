@@ -115,7 +115,7 @@
         <div class="col-sm-12 col-md-6">
           <hr>
           <p class="logo_sub_text_white">We couldn’t be happier with Funk and Fable — they were absolutely fantastic from start to finish! They went above and beyond by learning two special songs just for us, which meant so much and made the day even more memorable. They arrived fully prepared, brought all their own equipment, and set everything up seamlessly without any hassle. At one point, we even put them on the spot with a song request they hadn’t prepared, and they still pulled it off brilliantly — it turned into one of the most unforgettable moments of the day. They were also amazing with the kids, even surprising them with a little 'Frozen' performance that had everyone smiling. Truly professional, talented, and thoughtful — we’re so grateful they were part of our day.</p>
-          <p class="logo_sub_text_white">- Shannon</p>
+          <p class="logo_sub_text_white">- Jack</p>
         </div>
         <div class="col-sm-12 col-md-6">
           <hr>
