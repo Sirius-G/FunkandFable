@@ -112,6 +112,12 @@ main {
   font-size: 20px;
   color: var(--primary-text);
 }
+.logo_sub_text_small {
+  font-family: 'Georgia', Georgia, serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--primary-text);
+}
 .inform_text {
   font-family: 'Georgia', Georgia, serif;
   font-weight: bold;
@@ -350,5 +356,15 @@ section {
     }
     .about_banner_mob {
       display: none;
+    }
+}
+
+/* ======== SERVICES BORDER ================*/
+/* -- Mobile phone view -- */
+
+  /* -- Desk top view -- */
+@media (min-width: 769px) {
+    .services_border {
+        border-right: 6px var(--primary-bg) solid;
     }
 }
