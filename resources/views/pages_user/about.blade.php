@@ -24,7 +24,7 @@
     <div class="bg_primary">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 mb-4">
                     <h2 class="inform_text">Expertise</h2>
                     <hr>
                     <p class="logo_sub_text_white">
