@@ -374,7 +374,3 @@ section {
         border-right: 6px var(--primary-bg) solid;
     }
 }
-
-.error_card {
-  background-color: rgba(255, 255, 255, 0.254) !important;
-}
