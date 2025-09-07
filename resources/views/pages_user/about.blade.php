@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-4 py-4 my-4">
-            <h1 class="inform_text pt-4 mt-4"><u>About Us</u></h1>
+            <h1 class="inform_text pt-4 mt-4"><u>About us</u></h1>
             <p class="logo_sub_text">We are Beth and Connor, an acoustic duo based out of South Wales. We're ready to elevate your event with great acoustic music!</p>
         </div>
         <div class="col-sm-12 col-md-8 text-center py-4 my-4">
