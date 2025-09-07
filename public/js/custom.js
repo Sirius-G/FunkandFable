@@ -16,24 +16,40 @@ function showActive(id){
 /* ===========================================
                 CONTACT FORM FUNCTION
 ============================================ */
-function mailForm(name, email, msg){
-    //Set recipient email address
-    recipient = 'contact@sycamoresound.co.uk';
+function mailFormFandF(name, email, phone, eventdate, location, msg){
+// Set recipient email address
+let recipient = 'contact@funkandfable.com';
 
-    window.location.href='mailto:'+recipient+'?subject=Contact Form Message&body='+msg+'%0A%0ABest regards,%0A%0A'+name+'%0A('+email+')';
-}
+let mailBody =
+  "Contact Details%0A" +
+  "Name: " + encodeURIComponent(name) + "%0A" +
+  "Email Address: " + encodeURIComponent(email) + "%0A" +
+  "Phone Number: " + encodeURIComponent(phone) + "%0A%0A" +
+  "Event Details:%0A" +
+  "Date: " + encodeURIComponent(eventdate) + "%0A" +
+  "Location: " + encodeURIComponent(location) + "%0A%0A" +
+  "Enquiry Message:%0A" + encodeURIComponent(msg) + "%0A%0A" +
+  "Best regards,%0A" + encodeURIComponent(name);
 
-/* ===========================================
-                ONE CLICK BOOKING
-============================================ */
-function oneClickBooking(){
-    //Set recipient email address and message
-    recipient = 'contact@sycamoresound.co.uk';
-    msg = 'Hey Connor, %0A%0AI\'m interested in learning guitar. %0A%0AMy name is [Add name here] and my contact telephone number is [Add telephone number here]. %0A%0AI am at a [beginner, intermediate, semi-professional] competency level. %0A%0AI look forward to hearing from you.';
+
+window.location.href =
+  "mailto:" + recipient +
+  "?subject=" + encodeURIComponent("Funk and Fable Contact Form Enquiry") +
+  "&body=" + mailBody;
 
 
-    window.location.href='mailto:'+recipient+'?subject=Quick Booking Enquiry&body='+msg+'%0A%0ABest regards,%0A%0A[Add you name here]%0A';
-   
+
+   /* window.location.href='mailto:'+recipient+'?subject=Contact Form Message
+    &body=
+    'Contact Name: '+name+
+    'Contact Email Address: '+email+
+    'Contact Telephone Number: '+phone+
+    'Event Details'%0A%0A
+    'Event Date: '+eventdate+
+    'Event Location: '+location+
+    'Enquiry: '+msg+'
+    %0A%0ABest regards,
+    %0A%0A'+name+'%0A('+email+')';*/
 }
 
 
