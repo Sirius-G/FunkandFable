@@ -17,6 +17,7 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
+Route::get('/repertoire', [App\Http\Controllers\HomeController::class, 'repertoire'])->name('repertoire');
 
 
 Auth::routes();

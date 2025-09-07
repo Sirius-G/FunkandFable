@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['welcome', 'home', 'about', 'services']]);
+        $this->middleware('auth', ['except' => ['welcome', 'home', 'about', 'services', 'repertoire']]);
     }
 
     /**
@@ -50,6 +50,11 @@ class HomeController extends Controller
     public function services()
     {
         return view('pages_user.services');
+    }
+
+    public function repertoire()
+    {
+        return view('pages_user.repertoire');
     }
 
 }

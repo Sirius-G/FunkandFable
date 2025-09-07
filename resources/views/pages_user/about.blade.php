@@ -7,11 +7,16 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 py-4 my-4">
+        <div class="col-sm-12 col-md-5 py-4 my-4">
             <h1 class="inform_text pt-4 mt-4"><u>About us</u></h1>
-            <p class="logo_sub_text">We are Beth and Connor, an acoustic duo based out of South Wales. We're ready to elevate your event with great acoustic music!</p>
+            <p class="logo_sub_text">
+                We are Beth and Connor, an acoustic duo from South Wales, passionate about bringing live music to life. From intimate gatherings to lively celebrations, we craft the perfect acoustic atmosphere to make your event unforgettable. Whether it’s soothing background melodies or upbeat sing-along favorites, we tailor our music to suit your occasion and leave your guests with lasting memories.
+            </p>
+            <div class="text-center">
+                <img src="images/svg/divider.png" alt="Funk and Fable logo" width="100%">
+            </div>
         </div>
-        <div class="col-sm-12 col-md-8 text-center py-4 my-4">
+        <div class="col-sm-12 col-md-7 text-center py-4 my-4">
             <img src="images/about_banner.jpg" alt="Beth and Connor - About page banner" width="100%" class="about_banner_mob">
             <img src="images/about_banner.jpg" alt="Beth and Connor - About page banner" width="100%" class="about_banner">
         </div>
