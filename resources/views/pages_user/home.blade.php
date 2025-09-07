@@ -21,6 +21,14 @@
 
     <div class="container">
       <div class="row">
+        <div class="col-sm-12">
+          <h1 class="inform_text"><u>Home</u><br><br></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
         <div class="col-sm-12 col-md-6">
           <h2 class="inform_text">Who are we?</h2>
           <p class="logo_sub_text">A little about us</p>

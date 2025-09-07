@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg shadow-sm sticky-top bgnav secondary-section wave-bottom">
+<nav class="navbar navbar-expand-lg shadow-sm fixed-top bgnav secondary-section wave-bottom">
             <div class="container">
                 <a class="navbar-brand item" href="{{ url('/') }}" tabindex="0" title="Funk & Fable Logo and Linked Index" aria-lable="Sycamore Sound Guitar Tuition Logo and Linked Index">
                     <img src="images/svg/F&FLogoLinear.svg" class="nav-logo" alt="Funk and Fable logo"> 

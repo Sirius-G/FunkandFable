@@ -2,6 +2,7 @@
 /* -- Branding -- Set Vars -- */
 :root {
   --primary-bg: #8ca784;
+  --dark-bg: rgb(60, 70, 57);
   --secondary-bg: #ffffff;
   --primary-text: #000000;
   --secondary-text: #ffffff;
@@ -273,6 +274,12 @@ section {
         C280,100 360,-20 440,50 \
         C520,120 580,-30 600,40 \
         L600,100 L0,100 Z' fill='%238ca784'/>\
+              <!-- Faint outline only on top wavy edge -->\
+      <path d='M0,0 \
+        C50,40 120,-40 200,30 \
+        C280,100 360,-20 440,50 \
+        C520,120 580,-30 600,40' \
+        fill='none' stroke='rgba(60,70,57,0.25)' stroke-width='3'/>\
     </svg>");
     transform: rotate(180deg);
 }

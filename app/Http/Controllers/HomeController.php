@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['welcome', 'home']]);
+        $this->middleware('auth', ['except' => ['welcome', 'home', 'about']]);
     }
 
     /**
@@ -40,6 +40,11 @@ class HomeController extends Controller
         $banner = Banners::where('id', 1)->get();
         $insta = Insta::get();
         return view('pages_user.home')->with('banner', $banner)->with('insta', $insta);
+    }
+
+    public function about()
+    {
+        return view('pages_user.about');
     }
 
 }
