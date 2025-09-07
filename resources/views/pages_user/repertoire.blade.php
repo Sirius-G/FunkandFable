@@ -32,7 +32,7 @@
                 <div class="col-sm-6 my-4">
                     <h2 class="inform_text pt-4 mt-4">Contemporary</h2>
                     <hr>
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         Shut Up And Dance - Walk The Moon<br>
                         Don’t Start Now - Dua Lipa<br>
                         New Rules - Dua Lipa<br>
@@ -65,7 +65,7 @@
                     
                     <h2 class="inform_text pt-4 mt-4">1990s</h2>
                     <hr>
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         What's Up? - The 4 Non Blondes<br>
                         You've Got A Friend In Me - Randy Newman<br>
                         Kiss Me - Sixpence None the Richer<br>
@@ -91,7 +91,7 @@
                     
                     <h2 class="inform_text pt-4 mt-4">1970s</h2>
                     <hr>                    
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         Isn't She Lovely - Stevie Wonder<br>
                         Superstition - Stevie Wonder<br>
                         Higher Ground - Stevie Wonder<br>
@@ -110,7 +110,7 @@
                 <div class="col-sm-6 my-4">
                     <h2 class="inform_text pt-4 mt-4">2000s</h2>
                     <hr>
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         Love Song - Sara Bareilles<br>
                         Crazy In Love - Beyonce<br>
                         Put Your Records On - Corinne Bailey Rae<br>
@@ -137,7 +137,7 @@
                     </p>
                     <h2 class="inform_text pt-4 mt-4">1980s</h2>
                     <hr>
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         I Wanna Dance With Somebody - Whitney Houston<br>
                         The Power of Love - Huey Lewis and the News<br>
                         Never Too Much - Luther Vandross<br>
@@ -159,7 +159,7 @@
                     
                     <h2 class="inform_text pt-4 mt-4">1960s</h2>
                     <hr>                    
-                    <p class="logo_sub_text_white">
+                    <p class="logo_sub_text_white_small">
                         Sunny - Bobby Hebb<br>
                         Stand By Me - Ben E. King<br>
                         I Saw Her Standing There - The Beatles<br>
@@ -169,6 +169,9 @@
                         Bad Moon Rising - Creedence Clearwater Revival<br>
                         Brown Eyed Girl - Van Morrison<br>
                     </p>
+                    <div class="text-center">
+                        <img src="images/svg/F&FLogoStacked.svg" width="90%" alt="Funk and Fable logo">
+                    </div>
                 </div>       
             </div>
         </div>

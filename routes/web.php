@@ -18,6 +18,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name(
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 Route::get('/repertoire', [App\Http\Controllers\HomeController::class, 'repertoire'])->name('repertoire');
+Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 
 
 Auth::routes();
