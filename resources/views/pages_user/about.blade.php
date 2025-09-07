@@ -12,9 +12,10 @@
             <p class="logo_sub_text">We are Beth and Connor, an acoustic duo based out of South Wales. We're ready to elevate your event with great acoustic music!</p>
         </div>
         <div class="col-sm-12 col-md-8 text-center py-4 my-4">
-            <img src="images/about_banner.jpg" alt="Beth and Connor - About page banner" width="100%" class="pt-4 mt-4">
+            <img src="images/about_banner.jpg" alt="Beth and Connor - About page banner" width="100%" class="about_banner_mob">
+            <img src="images/about_banner.jpg" alt="Beth and Connor - About page banner" width="100%" class="about_banner">
         </div>
-        </div>
+      </div>
     </div>
 
     <div class="section_gap"></div>

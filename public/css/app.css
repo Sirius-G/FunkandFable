@@ -330,3 +330,25 @@ section {
   width: 50px; /* ensures consistent size */
   height: auto;
 }
+
+
+/* ============ ABOUT BANNER ================= */
+  /* -- Mobile phone view -- */
+@media (max-width: 768px) {
+    .about_banner_mob{
+        margin-top: -60px;
+    }
+    .about_banner {
+      display: none;
+    }
+}
+
+  /* -- Desk top view -- */
+@media (min-width: 769px) {
+    .about_banner {
+        margin-top: 60px;
+    }
+    .about_banner_mob {
+      display: none;
+    }
+}
