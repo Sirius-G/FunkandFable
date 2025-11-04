@@ -47,4 +47,5 @@
 
     </div>
       
+    <script>showActive(6);</script>
 @endsection

@@ -59,4 +59,5 @@
 
     </div>
       
+    <script>showActive(2);</script>
 @endsection

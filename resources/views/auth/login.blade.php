@@ -74,4 +74,6 @@
     </div>
 </div>
 <div class="section_gap"<br><br></div>
+
+<script>showActive(7);</script>
 @endsection

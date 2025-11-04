@@ -82,3 +82,51 @@ document.addEventListener('keydown', function(event) {
     } 
   });
 
+
+  /* ===========================================
+        TESTIMONIALS CAROUSEL
+============================================ */
+ document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.querySelector('#testimonialCarousel .carousel-inner');
+    const rawTestimonials = Array.from(document.querySelectorAll('.raw-testimonial'));
+
+    // Function to build slides based on current screen width
+    function buildCarousel() {
+        const itemsPerSlide = window.innerWidth < 768 ? 1 : 2;
+        carouselInner.innerHTML = ''; // Clear existing slides
+
+        for (let i = 0; i < rawTestimonials.length; i += itemsPerSlide) {
+            const slide = document.createElement('div');
+            slide.classList.add('carousel-item');
+            if (i === 0) slide.classList.add('active');
+
+            const slideRow = document.createElement('div');
+            slideRow.classList.add('d-flex', 'justify-content-center', 'w-100', 'g-3');
+
+            const chunk = rawTestimonials.slice(i, i + itemsPerSlide);
+            chunk.forEach(item => {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('px-2');
+                wrapper.style.flex = `0 0 ${100 / itemsPerSlide}%`;
+                wrapper.style.maxWidth = `${100 / itemsPerSlide}%`;
+                wrapper.appendChild(item.firstElementChild.cloneNode(true));
+                slideRow.appendChild(wrapper);
+            });
+
+            slide.appendChild(slideRow);
+            carouselInner.appendChild(slide);
+        }
+    }
+
+    // Initial build
+    buildCarousel();
+
+    // Rebuild carousel on screen resize
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            buildCarousel();
+        }, 200); // debounce to avoid excessive rebuilds
+    });
+});

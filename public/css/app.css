@@ -6,6 +6,7 @@
   --secondary-bg: #ffffff;
   --primary-text: #000000;
   --secondary-text: #ffffff;
+  --lightgreen: #98b590;
 
   --wave-color: #8ca784;   /* wave color */
   --wave-h: 40px;         /* wave height */
@@ -15,7 +16,7 @@
 html, body {
   height: 100%;            /* Make sure the page takes full height */
   margin: 0;               /* Remove default margins */
-  font-family: 'Georgia', Georgia, serif;
+  font-family: 'Georgia', Georgia, serif !important;
 }
 
 body {
@@ -158,6 +159,15 @@ img.nav-logo {
 
 nav li {
   color: var(--secondary-text);
+}
+
+.active:not(.carousel-item):not(.carousel-indicators li) {
+    font-weight: 900 !important;
+    border-bottom: 3px double var(--dark-bg);
+}
+
+.nav-item:hover {
+  color: #fff !important;
 }
 
 .hover-button {
@@ -430,4 +440,43 @@ section {
     border: solid 1px #333;
     border-radius: 30px;
     padding: 10px;
+}
+
+/* ============== TESTIMONIALS ========================= */
+#testimonialCarousel .card {
+    border-radius: 1rem;
+    border-color: var(--lightgreen);
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    color: var(--primary-text) !important;
+    min-height: 350px !important;  /* adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 767px) { 
+  #testimonialCarousel .card {
+    min-height: 450px !important;  /* adjust as needed */
+  }
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Georgia', Georgia, serif;
+    font-weight: 300;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 75%;
+}
+
+@media (min-width: 768px) {  
+  #testimonialCarousel .carousel-control-prev {
+      left: -10% !important; /* move it outward */
+  }
+
+  #testimonialCarousel .carousel-control-next {
+      right: -10% !important; /* move it outward */
+  }
 }

@@ -53,38 +53,29 @@
       <div class="row">
         <div class="col-sm-12">
           <h2 class="inform_text">Frequently asked questions</h2>
-          <p class="logo_sub_text_white">Get to know us even better....</p>
+          <p class="logo_sub_text_white">Get to know us even better....
+            <a href="/faq" title="See more FAQ's" aria-label="See more FAQ's" class="btn btn-primary btn-sm px-4 py-2 rounded-5 shadow-sm hover-button item" style="font-family: tahoma, sans-serif;">
+              <strong>See more FAQs</strong>
+            </a>
+          </p>
         </div>        
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">How can I book Funk & Fable?</p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="content_text">
-            You can book us by visiting our Contant Us page and submitting an enquiry. We'll get back to you with our availablility and a quote for your requested service!
-          </p>
-        </div>  
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">What services do you offer?</p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="content_text">
-            We provide live acoustic music for weddings, private and corporate events across the UK. Our standard line-up consists of acoustic guitar and vocals but we also offer extended line-ups that can include percussion, bass and saxophone. We provide all necessary equipment including PA and lighting. Head to our Services page for detailed information on what we offer.
-          </p>
-        </div>  
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">Can you learn song requests?</p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="content_text">
-            Of course! We will always do our best to do your favourite songs justice to help make your event extra special!
-          </p>
-        </div>  
+        @if(count($faq)>0)
+        @foreach($faq as $f)
+            <div class="col-sm-12 col-md-6 py-2 my-2">
+                <!-- Questions from DB -->
+                <hr><p>{{$f->question}}</p>
+            </div>
+            <div class="col-sm-12 col-md-6 py-2 my-2">
+                <!-- Answers from DB -->
+                <hr><p>{{$f->answer}}</p>
+            </div>
+        @endforeach
+        @else 
+            <div class="col-sm-12 text-center py-2 my-2">
+                <p>Sorry, no frequently asked questions found.</p>
+                <p>Click here to ask a new question</p>
+            </div>
+        @endif
       </div>
     </div>
   </div>
@@ -114,22 +105,34 @@
         <div class="col-sm-12">
           <h2 class="inform_text">Testimonials</h2>
           <p class="logo_sub_text_white">What are people saying about us?</p>
-        </div>        
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">I'd highly recommend Funk & Fable. I hired Beth and Connor for a private party. Their communication was excellent leading up to the event which included any preferences for the set list. Professional and friendly, they were so easy going and performed from a range of genres (something for everyone) adding in plenty of my favourites! Guests were really impressed with their sound and Beth's vocals. They were also really engaging with the guests and provided a relaxed atmosphere on a hot afternoon. I'd most definitely book Funk & Fable again.</p>
-          <p class="logo_sub_text_white">- Rhiannon</p>
         </div> 
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">We couldn’t be happier with Funk and Fable — they were absolutely fantastic from start to finish! They went above and beyond by learning two special songs just for us, which meant so much and made the day even more memorable. They arrived fully prepared, brought all their own equipment, and set everything up seamlessly without any hassle. At one point, we even put them on the spot with a song request they hadn’t prepared, and they still pulled it off brilliantly — it turned into one of the most unforgettable moments of the day. They were also amazing with the kids, even surprising them with a little 'Frozen' performance that had everyone smiling. Truly professional, talented, and thoughtful — we’re so grateful they were part of our day.</p>
-          <p class="logo_sub_text_white">- Jack</p>
+        
+        
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($testimonials as $testimonial)
+                    <div class="raw-testimonial d-none">
+                        <div class="card shadow-sm h-100 border-1">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                                <p class="card-text">"{{ $testimonial->testimonial }}"</p>
+                                <small class="card-text mt-3 mb-0">— {{ $testimonial->added_by }}</small>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-        <div class="col-sm-12 col-md-6">
-          <hr>
-          <p class="logo_sub_text_white">Loved watching these guys last night! Great style of music and loved Bethany's voice!</p>
-          <p class="logo_sub_text_white">- Shannon</p>
-        </div> 
+
+
+
       </div>
     </div>
   </div>
@@ -139,4 +142,5 @@
 
     </div>
       
+    <script>showActive(1);</script>
 @endsection
