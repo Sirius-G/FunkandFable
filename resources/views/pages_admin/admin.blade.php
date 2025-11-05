@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<x-admin-master>
 
 @section('content')
 <div class="section_gap"<br><br></div>
@@ -23,3 +23,5 @@
 </div>
 <div class="section_gap"<br><br></div>
 @endsection
+
+</x-admin-master>

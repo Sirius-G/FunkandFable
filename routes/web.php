@@ -26,3 +26,6 @@ Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])-
 Auth::routes();
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+Route::get('/adminaccount', [App\Http\Controllers\HomeController::class, 'myAccount']);
+Route::post('updateaccount', ['as' => 'UpdateDetails.account', 'uses' => 'App\Http\Controllers\HomeController@updateAccount']);
+Route::post('changepassword', ['as' => 'ChangePassword.account', 'uses' => 'App\Http\Controllers\HomeController@changePassword']);
