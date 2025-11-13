@@ -14,7 +14,10 @@ class Faq extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    //protected $fillable = [    ];
+    protected $fillable = [
+        'question',
+        'answer',
+    ];
 
     //Table Name
     protected $table = 'faq';

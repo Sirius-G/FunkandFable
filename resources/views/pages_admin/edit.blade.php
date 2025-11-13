@@ -21,25 +21,10 @@
 const editorData = {
     blocks: [
         @foreach($page->sections as $key => $content)
-        @php
-            // Handle section2 differently for readability
-            if ($key === 'section2') { //add other sections here
-                // Convert string to array if it contains commas
-                $items = array_map('trim', explode(',', $content));
-                // Join items with <br> for new lines
-                $text = implode('<br>', $items);
-            } else {
-                // For other sections, just use content as-is
-                $text = is_array($content) ? implode(', ', $content) : $content;
-            }
-
-            // Escape quotes for JS string
-            $text = addslashes($text);
-        @endphp
         {
             type: "paragraph",
             data: {
-                text: "<strong>{{ $key }}:</strong> {!! $text !!}"
+                text: "<strong>{{ $key }}:</strong> {!! addslashes($content) !!}"
             }
         },
         @endforeach

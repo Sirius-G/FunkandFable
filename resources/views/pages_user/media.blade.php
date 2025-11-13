@@ -10,11 +10,9 @@
         <div class="col-sm-12 col-md-5 py-4 my-4">
             <h1 class="inform_text pt-4 mt-4"><u>Media</u></h1>
             <p class="logo_sub_text">
-                Experience the sound of Beth and Connor beyond the stage. Here you’ll find our showreel that will give you a glimpse of what we bring to every event.
-                <br><br>
-                Watch & Listen to hear our unique sound of vocals and warm guitar tones. From stripped-back love songs to crowd-pleasing sing-alongs, our music is designed to set the perfect mood.
-                <br><br>
-                Stay connected with our latest music, gigs, and updates on social media. We regularly share live snippets and new covers so you can get a real taste of what we do.
+                {!! $media->sections['section1'] ?? '' !!}<br><br>
+                {!! $media->sections['section2'] ?? '' !!}<br><br>
+                {!! $media->sections['section3'] ?? '' !!}
             </p>
             <div class="text-center">
                 <img src="images/svg/divider.png" alt="Funk and Fable logo" width="100%">

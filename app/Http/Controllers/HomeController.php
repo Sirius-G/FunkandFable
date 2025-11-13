@@ -138,22 +138,34 @@ class HomeController extends Controller
         $banner = Banners::where('id', 4)->get();
         $repertoire = Page::where('slug', 'repertoire')->firstOrFail();
         $list = Page::where('slug', 'list')->firstOrFail();
+        $list1 = Page::where('slug', 'list1')->firstOrFail();
+        $list2 = Page::where('slug', 'list2')->firstOrFail();
+        $list3 = Page::where('slug', 'list3')->firstOrFail();
+        $list4 = Page::where('slug', 'list4')->firstOrFail();
+        $list5 = Page::where('slug', 'list5')->firstOrFail();
         return view('pages_user.repertoire')
                     ->with('banner', $banner)
                     ->with('repertoire', $repertoire)
-                    ->with('list', $list);
+                    ->with('list', $list)
+                    ->with('list1', $list1)
+                    ->with('list2', $list2)
+                    ->with('list3', $list3)
+                    ->with('list4', $list4)
+                    ->with('list5', $list5);
     }
 
     public function media()
     {
         $banner = Banners::where('id', 5)->get();
-        return view('pages_user.media')->with('banner', $banner);
+        $media = Page::where('slug', 'media')->firstOrFail();
+        return view('pages_user.media')->with('banner', $banner)->with('media', $media);
     }
 
     public function contact()
     {
-        $banner = Banners::where('id', 5)->get();
-        return view('pages_user.contact')->with('banner', $banner);
+        $banner = Banners::where('id', 6)->get();
+        $contact = Page::where('slug', 'contact')->firstOrFail();
+        return view('pages_user.contact')->with('banner', $banner)->with('contact', $contact);
     }
 
     //==================== ADMIN METHODS ===================================
@@ -221,5 +233,43 @@ class HomeController extends Controller
             return back()->with('error', 'Your Passwords didn\'t match! Please try again.');
         }
     }    
+
+    public function admin_faq(){
+        $faqs = Faq::get();
+        
+        return view('pages_admin.edit_faq')->with('faqs', $faqs);
+    }
+
+    public function faq_edit($id)
+    {
+        // Include soft-deleted FAQs in case we want to edit them
+        $faq = Faq::withTrashed()->findOrFail($id);
+
+        return view('pages_admin.faqs_edit', compact('faq'));
+    }
+
+    public function faq_update(Request $request, $id)
+    {
+        // Include soft-deleted FAQs
+        $faq = Faq::withTrashed()->findOrFail($id);
+
+        // Validate incoming request
+        $request->validate([
+            'question' => 'required|string|max:255',
+            'answer' => 'required|string',
+        ]);
+
+        // Update the FAQ
+        $faq->update([
+            'question' => $request->question,
+            'answer' => $request->answer,
+        ]);
+
+        return redirect()->route('admin.faq', $faq->id)
+                         ->with('success', 'FAQ updated successfully.');
+    }
+
+
+
 
 }

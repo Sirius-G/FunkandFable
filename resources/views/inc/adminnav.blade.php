@@ -54,14 +54,25 @@
         <div id="collapseHome" class="collapse" aria-labelledby="headingHome" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/0/edit"><i class="fas fa-fw fa-edit"></i> Edit Home Titles</a>
-            <a class="collapse-item" href="/admin/1/edit"><i class="fas fa-fw fa-edit"></i> Edit Home Overview</a>
+            <a class="collapse-item" href="/admin/1/edit"><i class="fas fa-fw fa-edit"></i> Home Overview</a>
           </div>
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseHome">
+          <i class="fas fa-fw fa-question"></i><span>FAQ Page</span>
+        </a>
+        <div id="collapseFAQ" class="collapse" aria-labelledby="headingFAQ" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Sections:</h6>
+            <a class="collapse-item" href="/admin/faq"><i class="fas fa-fw fa-edit"></i> FAQs</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
@@ -70,15 +81,15 @@
         <div id="collapseAbout" class="collapse" aria-labelledby="headingAbout" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/2/edit"><i class="fas fa-fw fa-edit"></i> Edit About Overview</a>
-            <a class="collapse-item" href="/admin/3/edit"><i class="fas fa-fw fa-edit"></i> Edit Expertise Overview</a>
+            <a class="collapse-item" href="/admin/2/edit"><i class="fas fa-fw fa-edit"></i> About Overview</a>
+            <a class="collapse-item" href="/admin/3/edit"><i class="fas fa-fw fa-edit"></i> Expertise Overview</a>
           </div>
         </div>
       </li>
 
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
       <!-- Services Page -->
       <li class="nav-item">
@@ -88,15 +99,15 @@
         <div id="collapseServices" class="collapse" aria-labelledby="headingServices" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/4/edit"><i class="fas fa-fw fa-edit"></i> Edit Services Overview</a>
-            <a class="collapse-item" href="/admin/5/edit"><i class="fas fa-fw fa-edit"></i> Edit Services1</a>
-            <a class="collapse-item" href="/admin/6/edit"><i class="fas fa-fw fa-edit"></i> Edit Service2</a>
+            <a class="collapse-item" href="/admin/4/edit"><i class="fas fa-fw fa-edit"></i> Services Overview</a>
+            <a class="collapse-item" href="/admin/5/edit"><i class="fas fa-fw fa-edit"></i> Services1</a>
+            <a class="collapse-item" href="/admin/6/edit"><i class="fas fa-fw fa-edit"></i> Service2</a>
           </div>
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
       <!-- Repertoire Page -->
       <li class="nav-item">
@@ -106,14 +117,19 @@
         <div id="collapseRepertoire" class="collapse" aria-labelledby="headingRepertoire" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/7/edit"><i class="fas fa-fw fa-edit"></i> Edit Repertoire Overview</a>
-            <a class="collapse-item" href="/admin/8/edit"><i class="fas fa-fw fa-edit"></i> Edit Repertoire List</a>
+            <a class="collapse-item" href="/admin/7/edit"><i class="fas fa-fw fa-edit"></i> Repertoire Overview</a>
+            <a class="collapse-item" href="/admin/8/edit"><i class="fas fa-fw fa-edit"></i> Repertoire Contemporary</a>
+            <a class="collapse-item" href="/admin/11/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 2000s</a>
+            <a class="collapse-item" href="/admin/9/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 1990s</a>
+            <a class="collapse-item" href="/admin/12/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 1980s</a>
+            <a class="collapse-item" href="/admin/10/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 1970s</a>
+            <a class="collapse-item" href="/admin/13/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 1960s</a>
           </div>
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
       <!-- Media Page -->
       <li class="nav-item">
@@ -123,13 +139,13 @@
         <div id="collapseMedia" class="collapse" aria-labelledby="headingMedia" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/9/edit"><i class="fas fa-fw fa-edit"></i> Edit Media Overview</a>
+            <a class="collapse-item" href="/admin/14/edit"><i class="fas fa-fw fa-edit"></i> Media Overview</a>
           </div>
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
       <!-- Contact Page -->
       <li class="nav-item">
@@ -139,13 +155,13 @@
         <div id="collapseContact" class="collapse" aria-labelledby="headingContact" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/10/edit"><i class="fas fa-fw fa-edit"></i> Edit Contact Overview</a>
+            <a class="collapse-item" href="/admin/15/edit"><i class="fas fa-fw fa-edit"></i> Contact Overview</a>
           </div>
         </div>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+      <!-- Divider
+      <hr class="sidebar-divider"> -->
 
 
         <!-- Divider -->

@@ -10,7 +10,7 @@
         <div class="col-sm-12 col-md-5 py-4 my-4">
             <h1 class="inform_text pt-4 mt-4"><u>Contact us</u></h1>
             <p class="logo_sub_text">
-                If you're interested in booking us for your event, please fill in the below form and we'll get back to you as soon as possible.
+                {!! $contact->sections['section1'] ?? '' !!}
             </p>
             <div class="text-center">
                 <img src="images/svg/divider.png" alt="Funk and Fable logo" width="100%">

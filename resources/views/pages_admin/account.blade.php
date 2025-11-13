@@ -15,16 +15,16 @@
 		<div class="card_body" style="padding: 20px;">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><span class="fw-700">Name: </span></div>
-			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><h4>{{ auth()->user()->name }}</h4></div>
+			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><h5>{{ auth()->user()->name }}</h5></div>
 		</div>
 		<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"><span class="fw-700">Registered Email Address: </span></div>
-			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><h4>{{ auth()->user()->email }}</h4> </div>
+			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><h5>{{ auth()->user()->email }}</h5> </div>
 		</div>	
 		</div>
 		<div class="card_footer d-flex justify-content-evenly m-4">
 		<button
-				class="btn btn-primary m-2"
+				class="btn btn-primary btn-sm m-2"
 				data-toggle="modal"
 				data-target="#UpdateDetails"
 				type="button"
@@ -32,7 +32,7 @@
 		</button>
 
 		<button
-				class="btn btn-warning pull-right m-2"
+				class="btn btn-warning btn-sm pull-right m-2"
 				data-toggle="modal"
 				data-target="#ChangePassword"
 				type="button"
