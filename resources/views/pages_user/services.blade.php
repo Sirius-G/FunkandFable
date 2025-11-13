@@ -8,42 +8,46 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6 p-4 my-4 services_border">
-            <h1 class="inform_text pt-4 mt-4"><u>What we offer</u></h1>
-            <p class="logo_sub_text">
-                We provide live acoustic music for weddings, private and corporate events. Here you'll find a list of our services to find the best option for your event!
-            </p>
-            <p class="logo_sub_text">
-                Prices are based on 2 x 45 minute sets. Please enquire for longer set times. 
-            </p>
+            <h1 class="inform_text pt-4 mt-4"><u>{!! $offer->sections['section1'] ?? '' !!}</u></h1>
+            <p class="logo_sub_text">{!! $offer->sections['section2'] ?? '' !!}</p>
+            <p class="logo_sub_text">{!! $offer->sections['section3'] ?? '' !!}</p>
             <div class="text-center">
-                <img src="images/services.jpg" alt="Beth and Connor - Services image" width="72%">
+                @if(count($banner)>0)
+                @foreach($banner as $b)
+                    <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="72%">
+                @endforeach
+                @endif
             </div>
         </div>
         <div class="col-sm-12 col-md-6 p-4 my-4">
-            <h2 class="inform_text pt-4 mt-4">Extended Lineup | Acoustic Duo</h2>
-            <p class="logo_sub_text_small">Prices from £300</p>
-            <br>
-            <p class="logo_sub_text">Vocals and Acoustic Guitar</p>
-            <hr>
+            @php
+                $sections = $details->sections ?? [];
+                $chunks = array_chunk($sections, 3, true);
+            @endphp
 
-            <h2 class="inform_text">Extended Lineup | Acoustic Trio</h2>
-            <p class="logo_sub_text_small">Prices from £450</p>
-            <br>
-            <p class="logo_sub_text">Vocals and Acoustic Guitar with the choice to add Percussion, Bass or Sax</p>
-            <hr>
+            @foreach($chunks as $group)
+                @php $values = array_values($group); @endphp
 
-            <h2 class="inform_text">Extended Lineup | Acoustic Band</h2>
-            <p class="logo_sub_text_small">Prices from £600</p>
-            <br>
-            <p class="logo_sub_text">4-5 piece lineup with Vocals, Acoustic Guitar and choice of Percussion, Bass or Sax</p>
-            <hr>
+                @if(isset($values[0]))
+                    <h2 class="inform_text pt-4 mt-4">{!! $values[0] !!}</h2>
+                @endif
 
-            <h2 class="inform_text">Optional Extras​ | Add Ons</h2>
-            <p class="logo_sub_text_small">Tailor your event</p>
+                @if(isset($values[1]))
+                    <p class="logo_sub_text_small">{!! $values[1] !!}</p>
+                    <br>
+                @endif
+
+                @if(isset($values[2]))
+                    <p class="logo_sub_text">{!! $values[2] !!}</p>
+                    <hr>
+                @endif
+            @endforeach
+            <h2 class="inform_text">{!! $details2->sections['section1'] ?? '' !!}</h2>
+            <p class="logo_sub_text_small">{!! $details2->sections['section2'] ?? '' !!}</p>
             <br>
-            <p class="logo_sub_text">Wedding Ceremony Performance - from £200</p>
-            <p class="logo_sub_text">Drinks Reception - from £300</p>
-            <p class="logo_sub_text">DJ Service - from £100</p>
+            <p class="logo_sub_text">{!! $details2->sections['section3'] ?? '' !!}</p>
+            <p class="logo_sub_text">{!! $details2->sections['section4'] ?? '' !!}</p>
+            <p class="logo_sub_text">{!! $details2->sections['section5'] ?? '' !!}</p>
             
         </div>
       </div>

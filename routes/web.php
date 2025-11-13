@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +16,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
-Route::get('/faq', [App\Http\Controllers\HomeController::class, 'faq'])->name('faq');
-Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
-Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
-Route::get('/repertoire', [App\Http\Controllers\HomeController::class, 'repertoire'])->name('repertoire');
-Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/services', [HomeController::class, 'services'])->name('services');
+Route::get('/repertoire', [HomeController::class, 'repertoire'])->name('repertoire');
+Route::get('/media', [HomeController::class, 'media'])->name('media');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 
 Auth::routes();
 
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
-Route::get('/adminaccount', [App\Http\Controllers\HomeController::class, 'myAccount']);
-Route::post('updateaccount', ['as' => 'UpdateDetails.account', 'uses' => 'App\Http\Controllers\HomeController@updateAccount']);
-Route::post('changepassword', ['as' => 'ChangePassword.account', 'uses' => 'App\Http\Controllers\HomeController@changePassword']);
+Route::get('/admin', [HomeController::class, 'index'])->name('admin');
+Route::get('/adminaccount', [HomeController::class, 'myAccount']);
+Route::post('updateaccount', ['as' => 'UpdateDetails.account', 'uses' => 'HomeController@updateAccount']);
+Route::post('changepassword', ['as' => 'ChangePassword.account', 'uses' => 'HomeController@changePassword']);
+
+
+Route::get('/admin/{page}/edit', [HomeController::class, 'edit'])->name('admin.edit');
+Route::put('/admin/{page}', [HomeController::class, 'update'])->name('admin.update');

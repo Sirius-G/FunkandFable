@@ -8,6 +8,8 @@ use App\Models\Banners;
 use App\Models\Insta;
 use App\Models\Faq;
 use App\Models\Testimonial;
+use App\Models\PageContents;
+use App\Models\Page;
 
 class HomeController extends Controller
 {
@@ -41,11 +43,15 @@ class HomeController extends Controller
         $insta = Insta::get();
         $faq = Faq::orderby('id', 'ASC')->get()->take(3);
         $testimonials = Testimonial::get();
+        //$data = PageContents::where('id', 1)->get();
+        $home = Page::where('slug', 'home')->firstOrFail();
+        
         return view('pages_user.home')
                     ->with('banner', $banner)
                     ->with('insta', $insta)
                     ->with('faq', $faq)
-                    ->with('testimonials', $testimonials);
+                    ->with('testimonials', $testimonials)
+                    ->with('home', $home);
     }       
 
     public function faq()
@@ -56,27 +62,98 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('pages_user.about');
+        $about = Page::where('slug', 'about')->firstOrFail();
+        $expertise = Page::where('slug', 'expertise')->firstOrFail();
+        $banner = Banners::where('id', 2)->get();
+        return view('pages_user.about')
+                    ->with('banner', $banner)
+                    ->with('about', $about)
+                    ->with('expertise', $expertise);
     }
+
+    public function edit(Page $page)
+    {
+        // Ensure sections is an array
+        $sections = is_array($page->sections) ? $page->sections : json_decode($page->sections, true);
+
+        // Extract keys from sections JSON
+        $sectionKeys = array_keys($sections ?? []);
+
+        return view('pages_admin.edit', [
+            'page' => $page,
+            'sectionKeys' => $sectionKeys,
+        ]);
+    }
+
+
+    public function update(Request $request, Page $page)
+    {
+        $validated = $request->validate([
+            'sections' => 'required|string', // EditorJS sends JSON string
+        ]);
+
+        // Decode EditorJS output
+        $editorOutput = json_decode($validated['sections'], true);
+
+        $sectionsArray = [];
+        if (!empty($editorOutput['blocks'])) {
+            foreach ($editorOutput['blocks'] as $index => $block) {
+                $key = "section" . ($index + 1);
+                $text = $block['data']['text'] ?? '';
+
+                // Remove any "sectionX: " prefix from the text
+                $text = preg_replace('/^section\d+:\s*/i', '', $text);
+
+                $sectionsArray[$key] = $text;
+            }
+        }
+
+        // Overwrite sections completely
+        $page->update([
+            'sections' => $sectionsArray
+        ]);
+
+        return redirect()->back()->with('success', 'Page content updated.');
+    }
+
+
+
+
 
     public function services()
     {
-        return view('pages_user.services');
+        $banner = Banners::where('id', 3)->get();
+        $offer = Page::where('slug', 'offer')->firstOrFail();
+        $details = Page::where('slug', 'details')->firstOrFail();
+        $details2 = Page::where('slug', 'details2')->firstOrFail();
+        return view('pages_user.services')
+                    ->with('banner', $banner)
+                    ->with('offer', $offer)
+                    ->with('details', $details)
+                    ->with('details2', $details2);
     }
 
     public function repertoire()
     {
-        return view('pages_user.repertoire');
+        $banner = Banners::where('id', 4)->get();
+        $repertoire = Page::where('slug', 'repertoire')->firstOrFail();
+        $list = Page::where('slug', 'list')->firstOrFail();
+        return view('pages_user.repertoire')
+                    ->with('banner', $banner)
+                    ->with('repertoire', $repertoire)
+                    ->with('list', $list);
     }
 
     public function media()
     {
-        return view('pages_user.media');
+        $banner = Banners::where('id', 5)->get();
+        return view('pages_user.media')->with('banner', $banner);
     }
 
     public function contact()
     {
-        return view('pages_user.contact');
+        $banner = Banners::where('id', 5)->get();
+        return view('pages_user.contact')->with('banner', $banner);
     }
 
     //==================== ADMIN METHODS ===================================

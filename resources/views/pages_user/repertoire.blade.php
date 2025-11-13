@@ -9,16 +9,20 @@
       <div class="row">
         <div class="col-sm-12 col-md-6 py-4 my-4">
             <h1 class="inform_text pt-4 mt-4"><u>Repertoire</u></h1>
-            <p class="logo_sub_text">We are Beth and Connor, an acoustic duo based out of South Wales. We're ready to elevate your event with great acoustic music!</p>
+            <p class="logo_sub_text">{!! $repertoire->sections['section1'] ?? '' !!}</p>
             <div class="text-center">
                 <img src="images/svg/divider.png" alt="Funk and Fable logo" width="100%" class="py-4">
             </div>
-            <p class="logo_sub_text">With heartfelt vocals, and acoustic guitar, we create the perfect atmosphere for weddings, parties, and special occasions. Whether you’re after laid-back background vibes or upbeat sing-along classics, we’ll tailor our set to make your event unforgettable.</p>
+            <p class="logo_sub_text">{!! $repertoire->sections['section2'] ?? '' !!}</p>
 
         </div>
         <div class="col-sm-12 col-md-6 text-center py-4 my-4">
-            <img src="images/repertoire.jpg" alt="Beth and Connor - Repertoire page banner" width="100%" class="about_banner_mob">
-            <img src="images/repertoire.jpg" alt="Beth and Connor - Repertoire page banner" width="100%" class="about_banner">
+            @if(count($banner)>0)
+            @foreach($banner as $b)
+                <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner_mob">
+                <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner">
+            @endforeach
+            @endif
         </div>
       </div>
     </div>
@@ -30,39 +34,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 my-4">
-                    <h2 class="inform_text pt-4 mt-4">Contemporary</h2>
+                    <h2 class="inform_text pt-4 mt-4">{!! $list->sections['section1'] ?? '' !!}</h2>
                     <hr>
+
+                    <!-- ****** Change this to put all in own sections so can manipulate order etc -->
+                    @php
+                        $songs = $list->sections['section2'] ?? '';
+                        $songsArray = array_map('trim', explode('<br>', $songs));
+                    @endphp
                     <p class="logo_sub_text_white_small">
-                        Shut Up And Dance - Walk The Moon<br>
-                        Don’t Start Now - Dua Lipa<br>
-                        New Rules - Dua Lipa<br>
-                        Levitating - Dua Lipa<br>
-                        Dance The Night - Dua Lipa<br>
-                        Treasure - Bruno Mars<br>
-                        Runaway Baby - Bruno Mars<br>
-                        Marry You - Bruno Mars<br>
-                        Locked Out of Heaven - Bruno Mars<br>
-                        Adore You - Harry Styles<br>
-                        Get Lucky - Daft Punk ft. Pharrell Williams<br>
-                        Can’t Feel My Face - The Weeknd<br>
-                        Castles - Freya Ridings<br>
-                        Midnight Sky - Miley Cyrus<br>
-                        Edge of Midnight - Miley Cyrus ft. Stevie Nicks<br>
-                        Flowers - Miley Cyrus<br>
-                        The One - Kodaline<br>
-                        Beggin' - Maneskin<br>
-                        Rolling in the Deep - Adele<br>
-                        Perfect - Ed Sheeran<br>
-                        Love on Top - Beyonce<br>
-                        Feel it Still - Portugal the Man<br>
-                        About Damn Time - Lizzo<br>
-                        Raise Your Glass - P!nk<br>
-                        As It Was - Harry Styles<br>
-                        good 4 u - Olivia Rodrigo<br>
-                        Espresso - Sabrina Carpenter <br>
-                        Pink Pony Club - Chappell Roan<br>
+                        @foreach($songsArray as $song)
+                            {{ $song }}<br>
+                        @endforeach 
                     </p>
-                    
                     <h2 class="inform_text pt-4 mt-4">1990s</h2>
                     <hr>
                     <p class="logo_sub_text_white_small">

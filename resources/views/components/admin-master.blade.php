@@ -46,9 +46,9 @@
         <div class="my-4 py-4"></div>
         <div class="my-4 py-4"></div>
         <div class="my-4 py-4"></div>
-        @include('inc.footer')
+        
     </main>
-
+    @include('inc.footer')
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

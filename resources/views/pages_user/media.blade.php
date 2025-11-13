@@ -21,8 +21,12 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-7 text-center py-4 my-4">
-            <img src="images/media.jpg" alt="Beth and Connor - Media page banner" width="100%" class="about_banner_mob">
-            <img src="images/media.jpg" alt="Beth and Connor - Media page banner" width="100%" class="about_banner">
+            @if(count($banner)>0)
+            @foreach($banner as $b)
+                <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner_mob">
+                <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner">
+            @endforeach
+            @endif
         </div>
       </div>
     </div>

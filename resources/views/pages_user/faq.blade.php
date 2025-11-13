@@ -23,11 +23,11 @@
         @foreach($faq as $f)
             <div class="col-sm-12 col-md-6 py-2 my-2">
                 <!-- Questions from DB -->
-                <hr><p>{{$f->question}}</p>
+                <hr><p class="fs-5">{{$f->question}}</p>
             </div>
             <div class="col-sm-12 col-md-6 py-2 my-2">
                 <!-- Answers from DB -->
-                <hr><p>{{$f->answer}}</p>
+                <hr><p class="fs-5">{{$f->answer}}</p>
             </div>
         @endforeach
         @else 

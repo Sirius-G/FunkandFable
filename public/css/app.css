@@ -51,7 +51,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 550px;
   background: rgba(255, 255, 255, 0.15); 
   z-index: 1;
 }
@@ -479,4 +479,9 @@ section {
   #testimonialCarousel .carousel-control-next {
       right: -10% !important; /* move it outward */
   }
+}
+
+/* ADMIN */
+.collapse-item {
+  font-size: 12px !important;
 }
