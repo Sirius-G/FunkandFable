@@ -7,7 +7,7 @@
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
     <div class="sidebar-brand-icon">
-      <img src="{{asset('images/logo_icon.png')}}" height="40px;">
+      <img src="{{asset('images/icons/FFWebIcon.svg')}}" height="40px;">
     </div>
     <div class="sidebar-brand-text mx-3">Admin</div>
   </a>
