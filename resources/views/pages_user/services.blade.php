@@ -8,7 +8,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6 p-4 my-4 services_border">
-            <h1 class="inform_text pt-4 mt-4"><u>{!! $offer->sections['section1'] ?? '' !!}</u></h1>
+            <h1 class="inform_text pt-4 mt-4"><u>Services</u></h1>
+            <h2 class="inform_text pt-4 mt-4">{!! $offer->sections['section1'] ?? '' !!}</h2>
             <p class="logo_sub_text">{!! $offer->sections['section2'] ?? '' !!}</p>
             <p class="logo_sub_text">{!! $offer->sections['section3'] ?? '' !!}</p>
             <div class="text-center">
