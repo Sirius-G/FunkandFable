@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Date: </strong></label><br>
-                    <input tabindex="9" type="date" name="eventdate" id="eventdate" class="field item" required>
+                    <input tabindex="9" type="date" name="eventdate" id="eventdate" class="datefield item" required>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Location: </strong></label><br>

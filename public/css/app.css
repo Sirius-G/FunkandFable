@@ -442,6 +442,16 @@ section {
     padding: 10px;
 }
 
+.datefield {
+    width: 100%;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    border: solid 1px #333;
+    border-radius: 30px;
+    padding: 10px;
+}
+
 /* ============== TESTIMONIALS ========================= */
 #testimonialCarousel .card {
     border-radius: 1rem;
