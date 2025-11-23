@@ -73,7 +73,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInsta" aria-expanded="false" aria-controls="collapseHome">
-          <i class="fas fa-fw fa-question"></i><span>Insta Page</span>
+          <i class="fab fa-instagram"></i> Insta Page</span>
         </a>
         <div id="collapseInsta" class="collapse" aria-labelledby="headingInsta" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
