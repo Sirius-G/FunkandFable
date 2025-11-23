@@ -35,6 +35,10 @@ Route::post('changepassword', ['as' => 'ChangePassword.account', 'uses' => 'Home
 Route::get('/admin/faq', [HomeController::class, 'admin_faq'])->name('admin.faq');
 Route::get('/admin/faq/{id}', [HomeController::class, 'faq_edit'])->name('faqs.edit');
 Route::put('/admin/faq/{id}', [HomeController::class, 'faq_update'])->name('faqs.update');
+Route::get('/admin/insta', [HomeController::class, 'admin_insta'])->name('admin.insta');
+Route::get('/admin/insta/{id}', [HomeController::class, 'insta_edit'])->name('insta.edit');
+Route::put('/admin/insta/{id}', [HomeController::class, 'insta_update'])->name('insta.update');
+
 
 Route::get('/admin/{page}/edit', [HomeController::class, 'edit'])->name('admin.edit');
 Route::put('/admin/{page}', [HomeController::class, 'update'])->name('admin.update');

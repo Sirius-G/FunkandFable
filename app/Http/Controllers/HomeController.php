@@ -269,6 +269,42 @@ class HomeController extends Controller
                          ->with('success', 'FAQ updated successfully.');
     }
 
+    public function admin_insta(){
+        $insta = Insta::get();
+        
+        return view('pages_admin.edit_insta')->with('insta', $insta);
+    }
+
+    public function insta_edit($id)
+    {
+        // Include soft-deleted Instagram posts in case we want to edit them
+        $insta = Insta::withTrashed()->findOrFail($id);
+
+        return view('pages_admin.insta_edit', compact('insta'));
+    }
+
+    public function insta_update(Request $request, $id)
+    {
+        // Include soft-deleted Instagram Posts
+        $insta = Insta::withTrashed()->findOrFail($id);
+
+        // Validate incoming request
+        $request->validate([
+            'url' => 'required|string|max:255',
+            'content' => 'required|string',
+        ]);
+
+        $url = str_replace('/funkandfable/', '/', $request->url);
+        
+        // Update the Instagram Posts
+        $insta->update([
+            'url' => $url,
+            'content' => $request->content,
+        ]);
+
+        return redirect()->route('admin.insta', $insta->id)
+                         ->with('success', 'Instagram posts updated successfully.');
+    }
 
 
 

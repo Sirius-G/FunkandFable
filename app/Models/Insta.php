@@ -14,7 +14,7 @@ class Insta extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    //protected $fillable = [    ];
+    protected $fillable = ['url', 'content'];
 
     //Table Name
     protected $table = 'insta';

@@ -42,7 +42,7 @@
 
 
       <!-- Heading -->
-      <div class="sidebar-heading">User Pages</div>
+      <div class="sidebar-heading">User Pages/Sections</div>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -67,6 +67,18 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
             <a class="collapse-item" href="/admin/faq"><i class="fas fa-fw fa-edit"></i> FAQs</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInsta" aria-expanded="false" aria-controls="collapseHome">
+          <i class="fas fa-fw fa-question"></i><span>Insta Page</span>
+        </a>
+        <div id="collapseInsta" class="collapse" aria-labelledby="headingInsta" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Sections:</h6>
+            <a class="collapse-item" href="/admin/insta"><i class="fas fa-fw fa-edit"></i> Instagram posts</a>
           </div>
         </div>
       </li>
