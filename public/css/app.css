@@ -447,68 +447,37 @@ section {
     padding: 10px;
 }
 
-.dfield, input[type="date"] {
-    width: 100% !important;
-    line-height: 25px !important;
-    font-size: 16px !important;
-    font-weight: 300 !important;
-    border: 1px solid #333 !important;
-    border-radius: 30px !important;
-    padding: 10px 40px 10px 10px !important;
+.dfield {
+  background: #fff !important;
+  width: 100%;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 300;
+  border: solid 1px #333;
+  border-radius: 30px;
+  padding: 10px;
+  /* max-height: 60px; */
 }
 
-/* Target iPhones using device width and pixel ratio */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    
-    /* Adjust wrapper width for iPhone */
-    .field-wrapper {
-        max-width: 80%; /* narrower on iPhone */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .dfield {
-        font-size: 14px;  /* optional smaller font */
-        padding: 8px;     /* optional smaller padding */
-    }
+.dfield .date-part {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 2em; /* day/month */
+  padding: 0;
+  margin: 0 10px;
 }
 
-
-.dfield,
-.dfield:focus,
-.dfield:active,
-.dfield:-webkit-autofill,
-.dfield:-webkit-autofill:focus {
-    font-weight: 300 !important;
-    -webkit-text-fill-color: #333 !important;
-    caret-color: #333;
+.dfield .date-part:last-child {
+  width: 4em; /* year */
 }
 
-.dfield::placeholder {
-    font-weight: 300;
-    color: #999;
+.dfield .separator {
+  margin: 0 4px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #333;
 }
-
-/* .calfield {
-    position: absolute;
-    right: 25px;
-    top: 65%;
-    transform: translateY(-50%);
-    color: #666;
-    pointer-events: none;
-    font-size: 18px;
-    z-index: 100;
-} */
-
-/* The wrapper must have relative positioning */
-/* .date-wrapper {
-    position: relative; /* THIS IS CRUCIAL */
-    width: 100%;
-    display: inline-block; /* optional, ensures wrapper fits input */
-} */
 
 
 

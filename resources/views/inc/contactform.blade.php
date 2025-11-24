@@ -23,23 +23,27 @@
         <fieldset class="border p-3 rounded">
             <legend class="float-none w-auto px-2">Event Details</legend>
             <div class="row">
-                <div class="col-sm-12 col-md-6 date-wrapper">
-                    <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Date: </strong></label><br>
-                    <!-- <input tabindex="9" type="date" name="eventdate" id="eventdate" class="field item" required> -->
-                    <input tabindex="9" type="date" name="eventdate" id="eventdate"  class="dfield flatpickr item" placeholder="Please select the event date" required>
-                    <!-- <i class="fa fa-calendar calfield" style="color: #333;"></i> -->
+                <div class="col-sm-12 col-md-6 " style="margin-top: -24px !important;">
+                    <label for="eventdate" class="label"><strong>Date: </strong></label><br>
+                    <div class="dfield">
+                        <input type="text" tabindex="9" maxlength="2" class="date-part item" placeholder="DD">
+                        <span class="separator">/</span>
+                        <input type="text" tabindex="10" maxlength="2" class="date-part item" placeholder="MM">
+                        <span class="separator">/</span>
+                        <input type="text" tabindex="11" maxlength="4" class="date-part item" placeholder="YYYY">
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 col-sm-12 col-md-6">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Location: </strong></label><br>
-                    <input tabindex="10" type="text" name="location" id="location" class="field item" placeholder="Please enter the event location" required>
+                    <input tabindex="12" type="text" name="location" id="location" class="field item" placeholder="Please enter the event location" required>
                 </div>
             </div>
             <label for="msg" class="label"  style="margin-top: -10px;"><strong>Enquiry: </strong></label><br>
-            <textarea tabindex="11" name="message" id="msg" class="texta item" placeholder="Tell us more about your event..." required data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"></textarea><br>
+            <textarea tabindex="13" name="message" id="msg" class="texta item" placeholder="Tell us more about your event..." required data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false"></textarea><br>
         </fieldset>
 
         <div class="text-center">
-            <input tabindex="12" type="submit" class="btn btn-primary btn-lg px-4 py-2 rounded-5 shadow-sm hover-button item mt-4" value="Send Message">
+            <input tabindex="14" type="submit" class="btn btn-primary btn-lg px-4 py-2 rounded-5 shadow-sm hover-button item mt-4" value="Send Message">
         </div>
     </form>
 </div>

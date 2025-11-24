@@ -147,3 +147,22 @@ document.addEventListener('keydown', function(event) {
 //         disableMobile: true       // Force Flatpickr on iPhone - prevent default
 //     });
 // });
+
+document.querySelectorAll('.date-part').forEach((input, index, arr) => {
+    input.addEventListener('input', function () {
+        if (this.value.length === this.maxLength) {
+            // Move to next input if it exists
+            if (index < arr.length - 1) {
+                arr[index + 1].focus();
+            }
+        }
+    });
+
+    // Optional: move back on backspace
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
+            arr[index - 1].focus();
+        }
+    });
+});
+
