@@ -465,7 +465,7 @@ section {
     
     /* Adjust wrapper width for iPhone */
     .field-wrapper {
-        max-width: 90%; /* narrower on iPhone */
+        max-width: 80%; /* narrower on iPhone */
         margin-left: auto;
         margin-right: auto;
     }
