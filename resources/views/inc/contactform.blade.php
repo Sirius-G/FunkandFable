@@ -26,8 +26,8 @@
                 <div class="col-sm-12 col-md-6 date-wrapper">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Date: </strong></label><br>
                     <!-- <input tabindex="9" type="date" name="eventdate" id="eventdate" class="field item" required> -->
-                    <input tabindex="9" type="text" name="eventdate" id="eventdate"  class="dfield flatpickr item" placeholder="Please select the event date" required>
-                    <i class="fa fa-calendar calfield" style="color: #333;"></i>
+                    <input tabindex="9" type="date" name="eventdate" id="eventdate"  class="dfield flatpickr item" placeholder="Please select the event date" required>
+                    <!-- <i class="fa fa-calendar calfield" style="color: #333;"></i> -->
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Location: </strong></label><br>

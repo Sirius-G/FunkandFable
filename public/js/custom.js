@@ -133,17 +133,17 @@ document.addEventListener('keydown', function(event) {
 
 
 // ============== JS DATE PICKER ===========================
-document.querySelectorAll('.flatpickr').forEach(input => {
-    input.addEventListener('touchstart', () => input.focus());
-});
+// document.querySelectorAll('.flatpickr').forEach(input => {
+//     input.addEventListener('touchstart', () => input.focus());
+// });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    flatpickr(".flatpickr", {
-        dateFormat: "Y-m-d",      // Format
-        allowInput: true,         // Allow manual input
-        altInput: true,           // Tidy display
-        altFormat: "d/m/Y",       // UK format
-        disableMobile: true       // Force Flatpickr on iPhone - prevent default
-    });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     flatpickr(".flatpickr", {
+//         dateFormat: "Y-m-d",      // Format
+//         allowInput: true,         // Allow manual input
+//         altInput: true,           // Tidy display
+//         altFormat: "d/m/Y",       // UK format
+//         disableMobile: true       // Force Flatpickr on iPhone - prevent default
+//     });
+// });

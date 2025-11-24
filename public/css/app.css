@@ -455,8 +455,6 @@ section {
     border: 1px solid #333 !important;
     border-radius: 30px !important;
     padding: 10px 40px 10px 10px !important;
-    -webkit-appearance: none !important;
-    appearance: none;
 }
 
 .dfield,
@@ -474,7 +472,7 @@ section {
     color: #999;
 }
 
-.calfield {
+/* .calfield {
     position: absolute;
     right: 25px;
     top: 65%;
@@ -483,14 +481,14 @@ section {
     pointer-events: none;
     font-size: 18px;
     z-index: 100;
-}
+} */
 
 /* The wrapper must have relative positioning */
-.date-wrapper {
+/* .date-wrapper {
     position: relative; /* THIS IS CRUCIAL */
     width: 100%;
     display: inline-block; /* optional, ensures wrapper fits input */
-}
+} */
 
 
 
