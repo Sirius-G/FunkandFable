@@ -132,13 +132,13 @@ document.addEventListener('keydown', function(event) {
 });
 
 
-// ================== FORCE REFRSH ON IPHONE ====================
-window.addEventListener("pageshow", function (event) {
-    if (event.persisted) {
-        location.reload();
-    }
+// ============== JS DATE PICKER ===========================
+document.addEventListener("DOMContentLoaded", function () {
+    flatpickr(".flatpickr", {
+        dateFormat: "Y-m-d",      // Format you want
+        allowInput: true,         // User can type manually
+        altInput: true,           // Pretty display
+        altFormat: "d/m/Y",       // Pretty format
+        disableMobile: true       // Forces Flatpickr on iPhone
+    });
 });
-
-function forceRefresh() {
-    location.replace(location.pathname + "?v=" + Date.now());
-}

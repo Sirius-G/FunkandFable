@@ -183,6 +183,11 @@ nav li {
     transition: all 0.3s ease;
 }
 
+.hover-button:focus, .hover-button:active { 
+    outline: 2px solid rgba(102, 175, 233, 0.5) !important;
+    outline-offset: 2px !important;
+}
+
 .logocontainer {
   position: relative;
   left: 0px;
@@ -447,30 +452,48 @@ section {
     line-height: 25px !important;
     font-size: 16px !important;
     font-weight: 300 !important;
-    border: solid 1px #333 !important;
+    border: 1px solid #333 !important;
     border-radius: 30px !important;
-    padding: 10px !important;
-    -webkit-appearance: none; 
-  appearance: none;
+    padding: 10px 40px 10px 10px !important;
+    -webkit-appearance: none !important;
+    appearance: none;
 }
 
-.dfield::-webkit-datetime-edit {
-    padding: 0 10px;
+.dfield,
+.dfield:focus,
+.dfield:active,
+.dfield:-webkit-autofill,
+.dfield:-webkit-autofill:focus {
+    font-weight: 300 !important;
+    -webkit-text-fill-color: #333 !important;
+    caret-color: #333;
 }
 
-.dfield::-webkit-datetime-edit-fields-wrapper {
-    padding: 0 5px;
+.dfield::placeholder {
+    font-weight: 300;
+    color: #999;
 }
 
-.dfield::-webkit-datetime-edit-text {
-    color: #333;
+.calfield {
+    position: absolute;
+    right: 25px;
+    top: 65%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    font-size: 18px;
+    z-index: 100;
 }
 
-.dfield::-webkit-datetime-edit-year-field,
-.dfield::-webkit-datetime-edit-month-field,
-.dfield::-webkit-datetime-edit-day-field {
-    padding: 0 2px;
+/* The wrapper must have relative positioning */
+.date-wrapper {
+    position: relative; /* THIS IS CRUCIAL */
+    width: 100%;
+    display: inline-block; /* optional, ensures wrapper fits input */
 }
+
+
+
 
 /* ============== TESTIMONIALS ========================= */
 #testimonialCarousel .card {

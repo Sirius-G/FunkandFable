@@ -1,5 +1,3 @@
-<script>forceRefresh();</script>
-
 <div class="contact_form">
     <p>All fields required</p>
     <form onsubmit="mailFormFandF(this.name.value, this.email.value, this.phone.value, this.eventdate.value, this.location.value, this.message.value)">
@@ -25,9 +23,11 @@
         <fieldset class="border p-3 rounded">
             <legend class="float-none w-auto px-2">Event Details</legend>
             <div class="row">
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 date-wrapper">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Date: </strong></label><br>
-                    <input tabindex="9" type="date" name="eventdate" id="eventdate" class="dfield item" required>
+                    <!-- <input tabindex="9" type="date" name="eventdate" id="eventdate" class="field item" required> -->
+                    <input tabindex="9" type="text" name="eventdate" id="eventdate"  class="dfield flatpickr item" placeholder="Please select the event date" required>
+                    <i class="fa fa-calendar calfield" style="color: #333;"></i>
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <label for="eventdate" class="label" style="margin-top: -35px;"><strong>Location: </strong></label><br>
