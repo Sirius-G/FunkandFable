@@ -1,6 +1,6 @@
 <div class="contact_form">
     <p>All fields required</p>
-    <form onsubmit="mailFormFandF(this.name.value, this.email.value, this.phone.value, this.eventdate.value, this.location.value, this.message.value)">
+    <form onsubmit="mailFormFandF(this.name.value, this.email.value, this.phone.value, this.eventday.value, this.eventmonth.value, this.eventyear.value, this.location.value, this.message.value)">
         <fieldset class="border p-3 rounded">
             <legend class="float-none w-auto px-2">Contact Details</legend>
 
@@ -26,11 +26,11 @@
                 <div class="col-sm-12 col-md-6 " style="margin-top: -24px !important;">
                     <label for="eventdate" class="label"><strong>Date: </strong></label><br>
                     <div class="dfield">
-                        <input type="text" tabindex="9" maxlength="2" class="date-part item" placeholder="DD">
+                        <input type="text" tabindex="9" name="eventday" id="eventday" maxlength="2" class="date-part item" placeholder="DD" required>
                         <span class="separator">/</span>
-                        <input type="text" tabindex="10" maxlength="2" class="date-part item" placeholder="MM">
+                        <input type="text" tabindex="10" name="eventmonth" id="eventmonth"  maxlength="2" class="date-part item" placeholder="MM" required>
                         <span class="separator">/</span>
-                        <input type="text" tabindex="11" maxlength="4" class="date-part item" placeholder="YYYY">
+                        <input type="text" tabindex="11" name="eventyear" id="eventyear"  maxlength="4" class="date-part item" placeholder="YYYY" required>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-sm-12 col-md-6">

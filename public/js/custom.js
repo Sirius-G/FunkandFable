@@ -16,7 +16,7 @@ function showActive(id){
 /* ===========================================
                 CONTACT FORM FUNCTION
 ============================================ */
-function mailFormFandF(name, email, phone, eventdate, location, msg){
+function mailFormFandF(name, email, phone, eventday, eventmonth, eventyear, location, msg){
 // Set recipient email address
 let recipient = 'contact@funkandfable.com';
 
@@ -26,7 +26,10 @@ let mailBody =
   "Email Address: " + encodeURIComponent(email) + "%0A" +
   "Phone Number: " + encodeURIComponent(phone) + "%0A%0A" +
   "Event Details:%0A" +
-  "Date: " + encodeURIComponent(eventdate) + "%0A" +
+  "Date:%0A" +
+  "Day: " + encodeURIComponent(eventday) + "%0A" +
+  "Month: " + encodeURIComponent(eventmonth) + "%0A" +
+  "Year: " + encodeURIComponent(eventyear) + "%0A" +
   "Location: " + encodeURIComponent(location) + "%0A%0A" +
   "Enquiry Message:%0A" + encodeURIComponent(msg) + "%0A%0A" +
   "Best regards,%0A" + encodeURIComponent(name);
@@ -45,7 +48,9 @@ window.location.href =
     'Contact Email Address: '+email+
     'Contact Telephone Number: '+phone+
     'Event Details'%0A%0A
-    'Event Date: '+eventdate+
+    'Event Day: '+eventday+
+    'Event Month: '+eventmonth+
+    'Event Year: '+eventyear+
     'Event Location: '+location+
     'Enquiry: '+msg+'
     %0A%0ABest regards,
