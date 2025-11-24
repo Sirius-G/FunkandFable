@@ -450,6 +450,26 @@ section {
     border: solid 1px #333 !important;
     border-radius: 30px !important;
     padding: 10px !important;
+    -webkit-appearance: none; 
+  appearance: none;
+}
+
+.dfield::-webkit-datetime-edit {
+    padding: 0 10px;
+}
+
+.dfield::-webkit-datetime-edit-fields-wrapper {
+    padding: 0 5px;
+}
+
+.dfield::-webkit-datetime-edit-text {
+    color: #333;
+}
+
+.dfield::-webkit-datetime-edit-year-field,
+.dfield::-webkit-datetime-edit-month-field,
+.dfield::-webkit-datetime-edit-day-field {
+    padding: 0 2px;
 }
 
 /* ============== TESTIMONIALS ========================= */

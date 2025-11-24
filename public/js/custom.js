@@ -130,3 +130,15 @@ document.addEventListener('keydown', function(event) {
         }, 200); // debounce to avoid excessive rebuilds
     });
 });
+
+
+// ================== FORCE REFRSH ON IPHONE ====================
+window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+        location.reload();
+    }
+});
+
+function forceRefresh() {
+    location.replace(location.pathname + "?v=" + Date.now());
+}
