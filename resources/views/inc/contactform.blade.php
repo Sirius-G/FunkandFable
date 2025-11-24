@@ -1,3 +1,5 @@
+<script>forceRefresh();</script>
+
 <div class="contact_form">
     <p>All fields required</p>
     <form onsubmit="mailFormFandF(this.name.value, this.email.value, this.phone.value, this.eventdate.value, this.location.value, this.message.value)">
