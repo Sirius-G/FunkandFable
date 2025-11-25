@@ -14,7 +14,7 @@ class Testimonial extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
-    protected $fillable = ['testimonial', 'added_by'];
+    protected $fillable = ['testimonial', 'added_by', 'confirmation'];
 
     //Table Name
     protected $table = 'testimonials';

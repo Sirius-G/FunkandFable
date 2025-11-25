@@ -61,7 +61,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseHome">
-          <i class="fas fa-fw fa-question"></i><span>FAQ Page</span>
+          <i class="fas fa-fw fa-question"></i><span>FAQ section</span>
         </a>
         <div id="collapseFAQ" class="collapse" aria-labelledby="headingFAQ" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -72,8 +72,8 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInsta" aria-expanded="false" aria-controls="collapseHome">
-          <i class="fab fa-instagram"></i> Insta Page</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInsta" aria-expanded="false" aria-controls="collapseInsta">
+          <i class="fab fa-instagram"></i> Instagram section</span>
         </a>
         <div id="collapseInsta" class="collapse" aria-labelledby="headingInsta" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -83,8 +83,19 @@
         </div>
       </li>
 
-      <!-- Divider
-      <hr class="sidebar-divider"> -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTest" aria-expanded="false" aria-controls="collapseTest">
+          <i class="fa fa-star"></i> Testimonials</span>
+        </a>
+        <div id="collapseTest" class="collapse" aria-labelledby="headingTest" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Sections:</h6>
+            <a class="collapse-item" href="/admin/testimonials"><i class="fas fa-fw fa-edit"></i> Testimonials</a>
+          </div>
+        </div>
+      </li>
+
+      <hr class="sidebar-divider">
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">

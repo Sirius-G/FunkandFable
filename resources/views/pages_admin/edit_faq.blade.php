@@ -6,7 +6,7 @@
     <h1>FAQs</h1>
 
     @if($faqs->count())
-        <ul class="list-group">
+        <ul class="list-group p-4">
             @foreach($faqs as $faq)
                 <li class="list-group-item d-flex justify-content-between align-items-start
                     {{ $faq->deleted_at ? 'list-group-item-secondary' : '' }}">

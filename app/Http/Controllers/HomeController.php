@@ -42,7 +42,7 @@ class HomeController extends Controller
         $banner = Banners::where('id', 1)->get();
         $insta = Insta::get();
         $faq = Faq::orderby('id', 'ASC')->get()->take(3);
-        $testimonials = Testimonial::get();
+        $testimonials = Testimonial::where('confirmation', 'Yes')->get();
         //$data = PageContents::where('id', 1)->get();
         $home = Page::where('slug', 'home')->firstOrFail();
         
@@ -307,5 +307,41 @@ class HomeController extends Controller
     }
 
 
+    public function admin_testimonials(){
+        $testimonials = Testimonial::get();
+        
+        return view('pages_admin.edit_testimonials')->with('testimonials', $testimonials);
+    }
+
+    public function testimonial_edit($id)
+    {
+        // Include soft-deleted testimonials in case we want to edit them
+        $testimonial = Testimonial::withTrashed()->findOrFail($id);
+
+        return view('pages_admin.testimonial_edit', compact('testimonial'));
+    }
+
+    public function testimonial_update(Request $request, $id)
+    {
+        // Include soft-deleted testimonials
+        $testimonial = Testimonial::withTrashed()->findOrFail($id);
+
+        // Validate incoming request
+        $request->validate([
+            'testimonial' => 'required|string|max:255',
+            'added_by' => 'required|string',
+            'confirmation' => 'required',
+        ]);
+        
+        // Update the testimonial
+        $testimonial->update([
+            'testimonial' => $request->testimonial,
+            'added_by' => $request->added_by,
+            'confirmation' => $request->confirmation,
+        ]);
+
+        return redirect()->route('admin.testimonials')
+                         ->with('success', 'Testimonial updated successfully.');
+    }
 
 }

@@ -137,37 +137,33 @@ document.addEventListener('keydown', function(event) {
 });
 
 
-// ============== JS DATE PICKER ===========================
-// document.querySelectorAll('.flatpickr').forEach(input => {
-//     input.addEventListener('touchstart', () => input.focus());
-// });
+var inputs = document.querySelectorAll('.date-part');
 
+for (var i = 0; i < inputs.length; i++) {
+  (function(index){
+    var input = inputs[index];
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     flatpickr(".flatpickr", {
-//         dateFormat: "Y-m-d",      // Format
-//         allowInput: true,         // Allow manual input
-//         altInput: true,           // Tidy display
-//         altFormat: "d/m/Y",       // UK format
-//         disableMobile: true       // Force Flatpickr on iPhone - prevent default
-//     });
-// });
-
-document.querySelectorAll('.date-part').forEach((input, index, arr) => {
-    input.addEventListener('input', function () {
-        if (this.value.length === this.maxLength) {
-            // Move to next input if it exists
-            if (index < arr.length - 1) {
-                arr[index + 1].focus();
-            }
+    input.addEventListener('input', function() {
+      if (this.value.length >= this.maxLength) {
+        // Move focus to next input if exists
+        if (index + 1 < inputs.length) {
+          setTimeout(function() {
+            inputs[index + 1].focus();
+          }, 10);
         }
+      }
     });
 
-    // Optional: move back on backspace
-    input.addEventListener('keydown', function (e) {
-        if (e.key === 'Backspace' && this.value.length === 0 && index > 0) {
-            arr[index - 1].focus();
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Backspace' && this.value.length === 0) {
+        if (index > 0) {
+          setTimeout(function() {
+            inputs[index - 1].focus();
+          }, 10);
         }
+      }
     });
-});
+  })(i);
+}
+
 

@@ -38,6 +38,9 @@ Route::put('/admin/faq/{id}', [HomeController::class, 'faq_update'])->name('faqs
 Route::get('/admin/insta', [HomeController::class, 'admin_insta'])->name('admin.insta');
 Route::get('/admin/insta/{id}', [HomeController::class, 'insta_edit'])->name('insta.edit');
 Route::put('/admin/insta/{id}', [HomeController::class, 'insta_update'])->name('insta.update');
+Route::get('/admin/testimonials', [HomeController::class, 'admin_testimonials'])->name('admin.testimonials');
+Route::get('/admin/testimonial/{id}', [HomeController::class, 'testimonial_edit'])->name('testimonial.edit');
+Route::put('/admin/testimonial/{id}', [HomeController::class, 'testimonial_update'])->name('testimonial.update');
 
 
 Route::get('/admin/{page}/edit', [HomeController::class, 'edit'])->name('admin.edit');

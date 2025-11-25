@@ -6,7 +6,7 @@
     <h1>Instagram</h1>
 
     @if($insta->count())
-        <ul class="list-group">
+        <ul class="list-group p-4">
             <div class="row">
             @foreach($insta as $i)
                 <div class="col-sm-12 col-md-4">  

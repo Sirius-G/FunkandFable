@@ -25,9 +25,6 @@
     <script src="{{asset('/js/3.5.0.jquery.min.js') }}"></script>
     <script src="{{asset('/js/custom.js') }}"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" />
 
     <link rel="icon" type="image/png" sizes="64x64" href="/images/icons/FFWebIcon.svg">
