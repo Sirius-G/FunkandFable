@@ -60,6 +60,41 @@ class HomeController extends Controller
         return view('pages_user.faq')->with('faq', $faq);
     }
 
+    public function faq_create(Request $request)
+    {
+        // Honeypot: if filled, it's a bot
+        if ($request->filled('website')) {
+            return back()->withErrors(['error' => 'Invalid submission detected.']);
+        }
+
+        // Validate form fields
+        $validated = $request->validate([
+            'question' => 'required|string|max:2000',
+            'email' => 'nullable|email|max:255',
+            'name' => 'nullable|max:255',
+            'human_check' => 'required|in:7',
+        ], [
+            'human_check.in' => 'Please answer the human verification question correctly.',
+        ]);
+
+        if ((int) $request->human_check !== 7) {
+            return back()
+                ->withErrors(['error' => 'Invalid submission detected.'])
+                ->withInput();
+        }
+
+
+        // Store new question in database
+        FAQ::create([
+            'question' => $validated['question'],
+            'email_address' => $validated['email'] ?? null,
+            'submitted_by' => $validated['name'] ?? null,
+        ]);
+
+        return back()->with('success', 'Your question has been submitted!');
+    }
+
+
     public function about()
     {
         $about = Page::where('slug', 'about')->firstOrFail();

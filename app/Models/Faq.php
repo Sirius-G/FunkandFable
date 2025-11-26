@@ -17,6 +17,8 @@ class Faq extends Model
     protected $fillable = [
         'question',
         'answer',
+        'email_address',
+        'submitted_by'
     ];
 
     //Table Name
