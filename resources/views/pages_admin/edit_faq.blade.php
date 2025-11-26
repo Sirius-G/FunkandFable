@@ -14,10 +14,10 @@
                         <strong>Q:</strong> {{ $faq->question }}<br>
                         <strong>A:</strong> {{ $faq->answer }}<br>
                         <small>
-                            Submitted by: {{ !empty($faq->submitted_by) ? $faq->submitted_by : 'No name provided' }}<br>
-                            Email Address: {{ !empty($faq->email_address) ? $faq->email_address : 'No email address provided' }}<br>
-                            Created: {{ $faq->created_at->format('Y-m-d H:i') }} |
-                            Updated: {{ $faq->updated_at->format('Y-m-d H:i') }}
+                            <strong>Submitted by:</strong> {{ !empty($faq->submitted_by) ? $faq->submitted_by : 'No name provided' }}<br>
+                            <strong>Email Address:</strong> {{ !empty($faq->email_address) ? $faq->email_address : 'No email address provided' }}<br>
+                            <strong>Created:</strong> {{ $faq->created_at->format('Y-m-d H:i') }} |
+                            <strong>Updated:</strong> {{ $faq->updated_at->format('Y-m-d H:i') }}
                             @if($faq->deleted_at)
                                 | Deleted: {{ $faq->deleted_at->format('Y-m-d H:i') }}
                             @endif
