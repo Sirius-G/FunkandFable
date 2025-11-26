@@ -14,6 +14,8 @@
                         <strong>Q:</strong> {{ $faq->question }}<br>
                         <strong>A:</strong> {{ $faq->answer }}<br>
                         <small>
+                            Sumitted by: {{ $faq->submitted_by }}
+                            Email Address: {{ $faq->email_address }}<br>
                             Created: {{ $faq->created_at->format('Y-m-d H:i') }} |
                             Updated: {{ $faq->updated_at->format('Y-m-d H:i') }}
                             @if($faq->deleted_at)
