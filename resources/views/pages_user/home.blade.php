@@ -102,7 +102,16 @@
       <div class="row">
         <div class="col-sm-12">
           <h2 class="inform_text">Testimonials</h2>
-          <p class="logo_sub_text_white">What are people saying about us?</p>
+          <p class="logo_sub_text_white">What are people saying about us?
+              <a href="#" 
+                title="Add a new testimonial" 
+                aria-label="Add a new testimonial" 
+                data-bs-toggle="modal" 
+                data-bs-target="#addTestimonial"            
+                class="btn btn-primary btn-sm px-4 py-2 rounded-5 shadow-sm hover-button item">
+                    Add a new testimonial
+              </a>
+          </p>
         </div> 
         
         
@@ -141,4 +150,51 @@
     </div>
       
     <script>showActive(1);</script>
+
+<!-- Modal for question -->
+
+<div class="modal fade" id="addTestimonial" tabindex="-1" aria-labelledby="addTestimoniallLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="addTestimonialLabel">Add Testimonial</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form action="{{ route('testimonial.create') }}" method="POST">
+        @csrf
+
+        <div class="modal-body">
+          <!-- Honeypot (bots fill this) -->
+          <input type="text" name="website" style="display:none">
+          <!-- Question -->
+          <div class="mb-3">
+            <label for="testimonial" class="form-label">Your Testimonial</label>
+            <textarea class="form-control" id="testimonial" name="testimonial" rows="3" required></textarea>
+          </div>
+          <!-- Name -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="name" class="form-control" id="name" name="name" required>
+          </div>
+          <!-- Human check -->
+          <div class="mb-3">
+            <label for="humanCheck" class="form-label">
+              Are you human? What is <strong>3 + 4</strong>?
+            </label>
+            <input type="text" class="form-control" id="humanCheck" name="human_check" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Testimonial</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
 @endsection

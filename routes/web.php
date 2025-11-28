@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::post('/faq/create', [HomeController::class, 'faq_create'])->name('faq.create');
+Route::post('/testimonial/create', [HomeController::class, 'testimonial_create'])->name('testimonial.create');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/repertoire', [HomeController::class, 'repertoire'])->name('repertoire');

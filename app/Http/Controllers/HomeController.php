@@ -20,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['welcome', 'home', 'faq', 'faq_create', 'about', 'services', 'repertoire', 'media', 'contact']]);
+        $this->middleware('auth', ['except' => ['welcome', 'home', 'faq', 'faq_create', 'testimonial_create', 'about', 'services', 'repertoire', 'media', 'contact']]);
     }
 
     /**
@@ -93,7 +93,38 @@ class HomeController extends Controller
 
         return back()->with('success', 'Your question has been submitted!');
     }
+    public function testimonial_create(Request $request)
+    {
+        // Honeypot: if filled, it's a bot
+        if ($request->filled('website')) {
+            return back()->withErrors(['error' => 'Invalid submission detected.']);
+        }
 
+        // Validate form fields
+        $validated = $request->validate([
+            'testimonial' => 'required|string|max:2000',
+            'name' => 'nullable|max:255',
+            'human_check' => 'required|in:7',
+        ], [
+            'human_check.in' => 'Please answer the human verification question correctly.',
+        ]);
+
+        if ((int) $request->human_check !== 7) {
+            return back()
+                ->withErrors(['error' => 'Invalid submission detected.'])
+                ->withInput();
+        }
+
+
+        // Store new question in database
+        Testimonial::create([
+            'testimonial' => $validated['testimonial'],
+            'added_by' => $validated['name'] ?? null,
+            'confirmation' => 'No'
+        ]);
+
+        return back()->with('success', 'Your testimonial has been submitted!');
+    }
 
     public function about()
     {

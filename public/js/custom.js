@@ -137,6 +137,9 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+  /* ===========================================
+        DATE INPUT HELPER - MOVE CURSOR
+============================================ */
 var inputs = document.querySelectorAll('.date-part');
 
 for (var i = 0; i < inputs.length; i++) {
