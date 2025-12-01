@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Banners;
 use App\Models\Insta;
 use App\Models\Faq;
+use App\Models\Video;
 use App\Models\Testimonial;
 use App\Models\PageContents;
 use App\Models\Page;
@@ -224,7 +225,11 @@ class HomeController extends Controller
     {
         $banner = Banners::where('id', 5)->get();
         $media = Page::where('slug', 'media')->firstOrFail();
-        return view('pages_user.media')->with('banner', $banner)->with('media', $media);
+        $videos = Video::get();
+        return view('pages_user.media')
+                    ->with('banner', $banner)
+                    ->with('media', $media)
+                    ->with('videos', $videos);
     }
 
     public function contact()

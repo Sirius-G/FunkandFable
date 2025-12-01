@@ -34,34 +34,51 @@
 
     <div class="bg_primary">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 mb-4">
-                    <h2 class="inform_text">Acoustic Duo Showreel</h2>
-                    <hr>
+            <div class="row mb-4">
+                <div class="col-sm-12">
+                <h2 class="inform_text">Video Gallery</h2>
+                <hr>
+
+
+                <!-- Main Video Window -->
+                <div class="video-container mb-4">
+                    <iframe id="main-video" src="https://www.youtube.com/embed/{{ $videos->first()->youtube_id ?? '' }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+
+
+                    <!-- Thumbnail Grid -->
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="video-container">
-                                <iframe
-                                    src="https://www.youtube.com/embed/8azP-BGWc1M" 
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen>
-                                </iframe>
-                            <br>
+                        @foreach($videos as $video)
+                            <div class="col-3 col-md-2 mb-4 text-center">
+                                <img
+                                src="https://img.youtube.com/vi/{{ $video->youtube_id }}/hqdefault.jpg"
+                                class="img-fluid video-thumb video_thumb"
+                                data-video="{{ $video->youtube_id }}">
+                                <hr><p class="mt-2">{{ $video->title }}</p>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                     <hr>
-                </div>        
+                </div>
             </div>
         </div>
     </div>
 
-    <section class="secondary-section wave-bottom"></section>
+    <section class="secondary-section wave-bottom" style="margin-top: -25px;"></section>
     <div class="section_gap"></div> 
 
+                    
 
-    </div>
-      
-    <script>showActive(5);</script>
+    <script>
+        document.querySelectorAll('.video-thumb').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+            const videoId = this.dataset.video;
+            document.getElementById('main-video').src = 'https://www.youtube.com/embed/' + videoId;
+            });
+        });
+
+    showActive(5);
+    </script>
+
 @endsection

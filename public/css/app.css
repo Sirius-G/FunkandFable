@@ -409,6 +409,35 @@ section {
     height: 100%;
   }
 
+  .video_thumb {
+    cursor:pointer !important; 
+    border-radius:6px !important; 
+    width:100% !important; 
+    height:70px !important; 
+    object-fit:cover !important;
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) and (max-width: 991px) {
+      .video_thumb {
+          height: 80px !important;
+      }
+  }
+
+  /* Desktop */
+  @media (min-width: 992px) {
+      .video_thumb {
+          height: 115px !important;
+      }
+  }
+
+
+  .video_thumb:hover {
+      transform: scale(101%) !important;
+      filter: grayscale(100%) !important;
+  }
+
+
 
   .contact_form {
     width: 80%;
