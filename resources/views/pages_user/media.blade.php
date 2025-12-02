@@ -74,7 +74,7 @@
         document.querySelectorAll('.video-thumb').forEach(thumb => {
             thumb.addEventListener('click', function() {
             const videoId = this.dataset.video;
-            document.getElementById('main-video').src = 'https://www.youtube.com/embed/' + videoId;
+            document.getElementById('main-video').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
             });
         });
 
