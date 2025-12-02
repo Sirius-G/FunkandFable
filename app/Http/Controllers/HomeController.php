@@ -415,4 +415,62 @@ class HomeController extends Controller
                          ->with('success', 'Testimonial updated successfully.');
     }
 
+    public function admin_videos(){
+        $videos =  Video::withTrashed()->get();
+        
+        return view('pages_admin.edit_videos')->with('videos', $videos);
+    }
+
+    public function video_edit($id)
+    {
+        // Include soft-deleted video in case we want to edit them
+        $video = Video::withTrashed()->findOrFail($id);
+
+        return view('pages_admin.video_edit', compact('video'));
+    }
+
+    public function video_update(Request $request, $id)
+    {
+        // Include soft-deleted videos
+        $video = Video::withTrashed()->findOrFail($id);
+
+        // Validate incoming request
+        $request->validate([
+            'youtube_id' => 'required|string|max:255',
+            'title' => 'required|string',
+        ]);
+        
+        // Update the testimonial
+        $testimonial->update([
+            'youtube_id' => $request->youtube_id,
+            'title' => $request->title,
+        ]);
+
+        return redirect()->route('admin.videos')
+                         ->with('success', 'Video updated successfully.');
+    }
+
+    public function video_delete($id)
+    {
+        $video = Video::withTrashed()->findOrFail($id);
+
+        // Soft delete
+        $video->delete();
+
+        return redirect()->back()->with('success', 'Video deleted successfully!');
+    }
+
+    public function video_restore($id)
+    {
+        // Include trashed items
+        $video = Video::withTrashed()->findOrFail($id);
+
+        // Restore the item
+        $video->restore();
+
+        return redirect()->back()->with('success', 'Video restored successfully!');
+    }
+
+
+
 }

@@ -54,48 +54,13 @@
         <div id="collapseHome" class="collapse" aria-labelledby="headingHome" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/1/edit"><i class="fas fa-fw fa-edit"></i> Home Overview</a>
+            <a class="collapse-item" href="/admin/1/edit"><i class="fas fa-fw fa-edit"></i> Home Overview <i class="fas fa-fw fa-home"></i></a>
+            <a class="collapse-item" href="/admin/faq"><i class="fas fa-fw fa-edit"></i> FAQs <i class="fas fa-fw fa-question"></i></a>
+            <a class="collapse-item" href="/admin/insta"><i class="fas fa-fw fa-edit"></i> Instagram posts <i class="fab fa-instagram"></i></a>
+            <a class="collapse-item" href="/admin/testimonials"><i class="fas fa-fw fa-edit"></i> Testimonials <i class="fa fa-star"></i></a>
           </div>
         </div>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseHome">
-          <i class="fas fa-fw fa-question"></i><span>FAQ section</span>
-        </a>
-        <div id="collapseFAQ" class="collapse" aria-labelledby="headingFAQ" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/faq"><i class="fas fa-fw fa-edit"></i> FAQs</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInsta" aria-expanded="false" aria-controls="collapseInsta">
-          <i class="fab fa-instagram"></i> Instagram section</span>
-        </a>
-        <div id="collapseInsta" class="collapse" aria-labelledby="headingInsta" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/insta"><i class="fas fa-fw fa-edit"></i> Instagram posts</a>
-          </div>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTest" aria-expanded="false" aria-controls="collapseTest">
-          <i class="fa fa-star"></i> Testimonials</span>
-        </a>
-        <div id="collapseTest" class="collapse" aria-labelledby="headingTest" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Sections:</h6>
-            <a class="collapse-item" href="/admin/testimonials"><i class="fas fa-fw fa-edit"></i> Testimonials</a>
-          </div>
-        </div>
-      </li>
-
-      <hr class="sidebar-divider">
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
@@ -163,6 +128,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
             <a class="collapse-item" href="/admin/14/edit"><i class="fas fa-fw fa-edit"></i> Media Overview</a>
+            <a class="collapse-item" href="/admin/videos"><i class="fas fa-fw fa-edit"></i> Media Video Gallery</a>
           </div>
         </div>
       </li>

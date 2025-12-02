@@ -44,6 +44,12 @@ Route::get('/admin/testimonials', [HomeController::class, 'admin_testimonials'])
 Route::get('/admin/testimonial/{id}', [HomeController::class, 'testimonial_edit'])->name('testimonial.edit');
 Route::put('/admin/testimonial/{id}', [HomeController::class, 'testimonial_update'])->name('testimonial.update');
 
+Route::get('/admin/videos', [HomeController::class, 'admin_videos'])->name('admin.videos');
+Route::get('/admin/video/{id}', [HomeController::class, 'video_edit'])->name('video.edit');
+Route::put('/admin/video/{id}', [HomeController::class, 'video_update'])->name('video.update');
+Route::delete('/admin/video/{id}/delete', [HomeController::class, 'video_delete'])->name('video.delete');
+Route::patch('/admin/video/{id}/restore', [HomeController::class, 'video_restore'])->name('video.restore');
+
 
 Route::get('/admin/{page}/edit', [HomeController::class, 'edit'])->name('admin.edit');
 Route::put('/admin/{page}', [HomeController::class, 'update'])->name('admin.update');

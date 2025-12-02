@@ -34,7 +34,7 @@
 </head>
 <body>
     @include('inc.nav')
-    @include('inc.messages')
+    
     <main>
         @yield('content')
 

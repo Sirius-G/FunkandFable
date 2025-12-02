@@ -14,6 +14,11 @@ class Video extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
 
+    protected $casts = [
+        'deleted_at' => 'datetime',
+    ];
+
+
     protected $fillable = ['youtube_id', 'title'];
 
     //Table Name
