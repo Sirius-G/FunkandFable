@@ -24,7 +24,7 @@
                     </div>
                     <div>
                         @if(!$t->deleted_at)
-                            <a href="{{ route('testimonial.edit', $t->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{ route('testimonial.edit', $t->id) }}" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button btn-sm">Edit</a>
                         @endif
                     </div>
                 </li>

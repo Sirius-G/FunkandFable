@@ -33,11 +33,11 @@
                     </div>
                     <div>
                         @if(!$v->deleted_at)
-                            <a href="{{ route('video.edit', $v->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{{ route('video.edit', $v->id) }}" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button btn-sm">Edit</a>
                             <form action="{{ route('video.delete', $v->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" 
+                                <button type="submit" class="btn btn-danger btn-sm px-4 py-2 rounded-3 shadow-sm hover-button btn-sm" 
                                     onclick="return confirm('Are you sure you want to delete this item?')">
                                     Delete
                                 </button>
@@ -46,7 +46,7 @@
                             <form action="{{ route('video.restore', $v->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success btn-sm">
+                                <button type="submit" class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button btn-sm">
                                     Restore
                                 </button>
                             </form>

@@ -471,6 +471,67 @@ class HomeController extends Controller
         return redirect()->back()->with('success', 'Video restored successfully!');
     }
 
+    public function banner_edit($id){
+        $banner_image = Banners::where('id', $id)->get();
+
+        return view('pages_admin.edit_banner')->with('banner_image', $banner_image);
+    }
+
+    public function update_banner(Request $request){
+                
+        $this->validate($request, [
+            'image_name' => 'image',
+            'alt' => 'required',
+            'id' => 'required'
+        ]);
+
+        $id = $request->input('id');
+
+        //return $id;
+		  		  
+        //Handle File Upload
+        if($request->hasFile('image_name')){
+
+            //Get original filename
+            $filenameWithExt = $request->file('image_name')->getClientOriginalName();
+            //Get just the filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Get Just filename extension
+            $extension = $request->file('image_name')->getClientOriginalExtension();
+            //Concatenate filename with date / time to make it unique
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            //Upload image
+			$img = $request->file('image_name');
+            $img->move('images', $fileNameToStore);	
+		} 	  
+		  
+            //Create new entry into Messages get_html_translation_table
+            try{
+                
+                $app = Banners::find($id);
+
+                // Update image if provided
+                if ($request->hasFile('image_name')) {
+                    $app->image_name = $fileNameToStore;
+                }
+
+                // Update alt text if provided
+                if ($request->filled('alt')) {
+                    $app->alt = $request->input('alt');
+                }
+
+                $app->update();
+
+			
+            } catch (\Illuminate\Database\QueryException $e) {
+                $errorCode = $e->errorInfo[1];
+                return back()->with('error', 'Something went wrong!'.$errorCode);
+            }
+              	
+                return redirect()->back()->with('success', 'Your record has been successfully updated.');
+    }
+
+
 
 
 }

@@ -73,8 +73,15 @@
     <script>
         document.querySelectorAll('.video-thumb').forEach(thumb => {
             thumb.addEventListener('click', function() {
-            const videoId = this.dataset.video;
-            document.getElementById('main-video').src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+                const videoId = this.dataset.video;
+                const mainVideo = document.getElementById('main-video');
+                mainVideo.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+                // scroll iframe into view when video changes
+                mainVideo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            // Then scroll up an additional 50px
+                setTimeout(() => {
+                    window.scrollBy({ top: -100, behavior: 'smooth' });
+                }, 300); // delay to allow scrollIntoView to start
             });
         });
 

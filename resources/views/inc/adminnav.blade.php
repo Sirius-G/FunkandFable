@@ -54,9 +54,10 @@
         <div id="collapseHome" class="collapse" aria-labelledby="headingHome" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/1"><i class="fas fa-fw fa-edit"></i> Home Banner <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/1/edit"><i class="fas fa-fw fa-edit"></i> Home Overview <i class="fas fa-fw fa-home"></i></a>
             <a class="collapse-item" href="/admin/faq"><i class="fas fa-fw fa-edit"></i> FAQs <i class="fas fa-fw fa-question"></i></a>
-            <a class="collapse-item" href="/admin/insta"><i class="fas fa-fw fa-edit"></i> Instagram posts <i class="fab fa-instagram"></i></a>
+            <a class="collapse-item" href="/admin/insta"><i class="fas fa-fw fa-edit"></i> Instagram Posts <i class="fab fa-instagram"></i></a>
             <a class="collapse-item" href="/admin/testimonials"><i class="fas fa-fw fa-edit"></i> Testimonials <i class="fa fa-star"></i></a>
           </div>
         </div>
@@ -69,6 +70,7 @@
         <div id="collapseAbout" class="collapse" aria-labelledby="headingAbout" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/2"><i class="fas fa-fw fa-edit"></i> About Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/2/edit"><i class="fas fa-fw fa-edit"></i> About Overview</a>
             <a class="collapse-item" href="/admin/3/edit"><i class="fas fa-fw fa-edit"></i> Expertise Overview</a>
           </div>
@@ -87,6 +89,7 @@
         <div id="collapseServices" class="collapse" aria-labelledby="headingServices" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/3"><i class="fas fa-fw fa-edit"></i> Services Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/4/edit"><i class="fas fa-fw fa-edit"></i> Services Overview</a>
             <a class="collapse-item" href="/admin/5/edit"><i class="fas fa-fw fa-edit"></i> Services1</a>
             <a class="collapse-item" href="/admin/6/edit"><i class="fas fa-fw fa-edit"></i> Service2</a>
@@ -105,6 +108,7 @@
         <div id="collapseRepertoire" class="collapse" aria-labelledby="headingRepertoire" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/4"><i class="fas fa-fw fa-edit"></i> Repertoire Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/7/edit"><i class="fas fa-fw fa-edit"></i> Repertoire Overview</a>
             <a class="collapse-item" href="/admin/8/edit"><i class="fas fa-fw fa-edit"></i> Repertoire Contemporary</a>
             <a class="collapse-item" href="/admin/11/edit"><i class="fas fa-fw fa-edit"></i> Repertoire 2000s</a>
@@ -127,6 +131,7 @@
         <div id="collapseMedia" class="collapse" aria-labelledby="headingMedia" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/5"><i class="fas fa-fw fa-edit"></i> Media Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/14/edit"><i class="fas fa-fw fa-edit"></i> Media Overview</a>
             <a class="collapse-item" href="/admin/videos"><i class="fas fa-fw fa-edit"></i> Media Video Gallery</a>
           </div>
@@ -144,6 +149,7 @@
         <div id="collapseContact" class="collapse" aria-labelledby="headingContact" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Sections:</h6>
+            <a  class="collapse-item" href="/admin/banner/6"><i class="fas fa-fw fa-edit"></i> Contact Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/15/edit"><i class="fas fa-fw fa-edit"></i> Contact Overview</a>
           </div>
         </div>
