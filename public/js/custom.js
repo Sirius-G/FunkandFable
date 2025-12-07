@@ -140,6 +140,7 @@ document.addEventListener('keydown', function(event) {
   /* ===========================================
         DATE INPUT HELPER - MOVE CURSOR
 ============================================ */
+document.addEventListener('DOMContentLoaded', function () {
 var inputs = document.querySelectorAll('.date-part');
 
 for (var i = 0; i < inputs.length; i++) {
@@ -168,5 +169,5 @@ for (var i = 0; i < inputs.length; i++) {
     });
   })(i);
 }
-
+});
 
