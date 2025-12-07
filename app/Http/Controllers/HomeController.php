@@ -278,7 +278,7 @@ class HomeController extends Controller
             }
         }
                 
-        return back()->with('success', 'Your Account Details have been Updated Successfully!');
+        return back()->with('success', 'Your account details have been updated successfully!');
     }
 
     public function changePassword(Request $request){
@@ -303,6 +303,8 @@ class HomeController extends Controller
         } else {
             return back()->with('error', 'Your Passwords didn\'t match! Please try again.');
         }
+
+        return back()->with('success', 'Your password has been updated successfully!');
     }    
 
     public function admin_faq(){

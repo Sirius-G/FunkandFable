@@ -37,8 +37,8 @@ Route::get('/admin', [HomeController::class, 'index'])->name('admin');
 
 //Admin account
 Route::get('/adminaccount', [HomeController::class, 'myAccount']);
-Route::post('updateaccount', ['as' => 'UpdateDetails.account', 'uses' => 'HomeController@updateAccount']);
-Route::post('changepassword', ['as' => 'ChangePassword.account', 'uses' => 'HomeController@changePassword']);
+Route::post('updateaccount', [HomeController::class, 'updateAccount'])->name('UpdateDetails.account');
+Route::post('changepassword', [HomeController::class, 'changePassword'])->name('ChangePassword.account');
 
 //Frequently asked questions
 Route::get('/admin/faq', [HomeController::class, 'admin_faq'])->name('admin.faq');

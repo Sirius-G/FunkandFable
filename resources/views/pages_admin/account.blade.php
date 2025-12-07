@@ -24,7 +24,7 @@
 		</div>
 		<div class="card_footer d-flex justify-content-evenly m-4">
 		<button
-				class="btn btn-primary btn-sm m-2"
+				class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button"
 				data-toggle="modal"
 				data-target="#UpdateDetails"
 				type="button"
@@ -32,7 +32,7 @@
 		</button>
 
 		<button
-				class="btn btn-warning btn-sm pull-right m-2"
+				class="btn btn-primary btn-sm px-4 py-2 rounded-3 shadow-sm hover-button pull-right"
 				data-toggle="modal"
 				data-target="#ChangePassword"
 				type="button"
