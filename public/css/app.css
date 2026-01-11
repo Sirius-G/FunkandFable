@@ -55,7 +55,7 @@ main {
     background: rgba(255, 255, 255, 0.15); 
     z-index: 1;
   }
-  .bookbutn { margin-top: 100px !important; }
+  /* .bookbutn { margin-top: 100px !important; } */
 }
 
 @media (min-width: 1200px) {
@@ -76,7 +76,7 @@ main {
     background: rgba(255, 255, 255, 0.15); 
     z-index: 1;
   }
-  .bookbutn { margin-top: 350px !important; }
+  /* .bookbutn { margin-top: 350px !important; } */
 }
 
 
@@ -231,7 +231,7 @@ nav li {
     .logostacked{
         position: relative;
         width: 60% !important;
-        margin-top: 25%;
+        margin-top: 40%;
         z-index: 1;
     }
     .logolinear {
@@ -244,7 +244,7 @@ nav li {
     .logolinear {
         position: relative;
         width: 45% !important;
-        margin-top: 10%;
+        margin-top: 25%;
         z-index: 1;
     }
     .logostacked {
