@@ -37,11 +37,22 @@ main {
   background-color: var(--secondary-bg);
 }
 
-.headerimage {
-  height: 500px;           /* Maintain specific height */
-  width: 100vw;             /* Scale width automatically */
-  object-fit: cover;       /* Fill container, crop edges if needed */
-  object-position: center; /* Keep the center of the image visible */
+@media (max-width: 1199px) {
+  .headerimage {
+    height: 500px;           /* Maintain specific height */
+    width: 100vw;             /* Scale width automatically */
+    object-fit: cover;       /* Fill container, crop edges if needed */
+    object-position: center; /* Keep the center of the image visible */
+  }
+}
+
+@media (min-width: 1200px) {
+  .headerimage {
+    height: 900px;           /* Maintain specific height */
+    width: 100vw;             /* Scale width automatically */
+    object-fit: cover;       /* Fill container, crop edges if needed */
+    object-position: center; /* Keep the center of the image visible */
+  }
 }
 
 /* White overlay */
