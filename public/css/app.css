@@ -44,6 +44,17 @@ main {
     object-fit: cover;       /* Fill container, crop edges if needed */
     object-position: center; /* Keep the center of the image visible */
   }
+  /* White overlay */
+  .headerimagecover {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.15); 
+    z-index: 1;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -53,19 +64,20 @@ main {
     object-fit: cover;       /* Fill container, crop edges if needed */
     object-position: center; /* Keep the center of the image visible */
   }
+    /* White overlay */
+  .headerimagecover {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 950px;
+    background: rgba(255, 255, 255, 0.15); 
+    z-index: 1;
+  }
 }
 
-/* White overlay */
-.headerimagecover {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 550px;
-  background: rgba(255, 255, 255, 0.15); 
-  z-index: 1;
-}
+
 
 .greenheader {
     background-color: var(--primary-bg) !important;
