@@ -9,7 +9,7 @@
             <img src="images/svg/F&FLogoLinear.svg" class="logolinear" alt="Funk and Fable logo">
             <img src="images/svg/F&FLogoStacked.svg" class="logostacked" alt="Funk and Fable logo">
             <p class="logo_sub_text_white sub_text">Professional Acoustic Band</p>
-            <a href="/contact" title="Make a booking or enquiry" aria-label="Make a booking or enquiry" class="btn btn-primary btn-sm px-4 py-2 rounded-5 shadow-sm hover-button item overbanner">
+            <a href="/contact" title="Make a booking or enquiry" aria-label="Make a booking or enquiry" class="btn btn-primary btn-sm px-4 py-2 rounded-5 shadow-sm hover-button item overbanner bookbutn">
               <strong>Book or Enquire Now</strong>
             </a>
           </div>
