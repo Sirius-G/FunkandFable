@@ -16,6 +16,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Temp redirect
+Route::get('/{any}', function () {
+    return redirect()->away('https://instagram.com/funkandfable/');
+})->where('any', '.*');
+
+
 //User routes
 Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('/home', [HomeController::class, 'home'])->name('home');
