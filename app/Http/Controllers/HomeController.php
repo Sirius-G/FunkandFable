@@ -9,6 +9,7 @@ use App\Models\Insta;
 use App\Models\Faq;
 use App\Models\Video;
 use App\Models\Testimonial;
+use App\Models\Package;
 use App\Models\PageContents;
 use App\Models\Page;
 
@@ -193,11 +194,13 @@ class HomeController extends Controller
         $offer = Page::where('slug', 'offer')->firstOrFail();
         $details = Page::where('slug', 'details')->firstOrFail();
         $details2 = Page::where('slug', 'details2')->firstOrFail();
+        $packages = Package::where('confirmation', 'Yes')->get();
         return view('pages_user.services')
                     ->with('banner', $banner)
                     ->with('offer', $offer)
                     ->with('details', $details)
-                    ->with('details2', $details2);
+                    ->with('details2', $details2)
+                    ->with('packages', $packages);
     }
 
     public function repertoire()
@@ -533,7 +536,42 @@ class HomeController extends Controller
                 return redirect()->back()->with('success', 'Your record has been successfully updated.');
     }
 
+    public function admin_packages(){
+        $packages = Package::get();
+        
+        return view('pages_admin.edit_packages')->with('packages', $packages);
+    }
 
+    public function package_edit($id)
+    {
+        // Include soft-deleted packages in case we want to edit them
+        $package = Package::withTrashed()->findOrFail($id);
+
+        return view('pages_admin.package_edit', compact('package'));
+    }
+
+    public function package_update(Request $request, $id)
+    {
+        // Include soft-deleted packages
+        $package = Package::withTrashed()->findOrFail($id);
+
+        // Validate incoming request
+        $request->validate([
+            'package' => 'required|string|max:255',
+            'added_by' => 'required|string',
+            'confirmation' => 'required',
+        ]);
+        
+        // Update the testimonial
+        $package->update([
+            'package' => $request->package,
+            'added_by' => $request->added_by,
+            'confirmation' => $request->confirmation,
+        ]);
+
+        return redirect()->route('admin.services')
+                         ->with('success', 'Packages updated successfully.');
+    }
 
 
 }

@@ -6,26 +6,26 @@
     <div class="section_gap"></div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-5 py-4 my-4">
+      <div class="row"><!--col-md-5 -->
+        <div class="col-sm-12 py-4 my-4">
             <h1 class="inform_text pt-4 mt-4"><u>Media</u></h1>
             <p class="logo_sub_text">
-                {!! $media->sections['section1'] ?? '' !!}<br><br>
-                {!! $media->sections['section2'] ?? '' !!}<br><br>
+                {!! $media->sections['section1'] ?? '' !!}<br>
+                {!! $media->sections['section2'] ?? '' !!}<br>
                 {!! $media->sections['section3'] ?? '' !!}
             </p>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <img src="images/svg/divider.png" alt="Funk and Fable logo" width="100%">
-            </div>
+            </div> -->
         </div>
-        <div class="col-sm-12 col-md-7 text-center py-4 my-4">
+        <!-- <div class="col-sm-12 col-md-7 text-center py-4 my-4">
             @if(count($banner)>0)
             @foreach($banner as $b)
                 <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner_mob">
                 <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%" class="about_banner">
             @endforeach
             @endif
-        </div>
+        </div> -->
       </div>
     </div>
 

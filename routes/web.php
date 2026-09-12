@@ -22,7 +22,7 @@ use App\Http\Controllers\HomeController;
 // })->where('any', '.*');
 
 
-//User routes
+//User routesv
 Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');

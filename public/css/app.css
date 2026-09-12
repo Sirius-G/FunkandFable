@@ -538,7 +538,7 @@ section {
 
 
 /* ============== TESTIMONIALS ========================= */
-#testimonialCarousel .card {
+#testimonialCarousel .card,  #packageCarousel .card{
     border-radius: 1rem;
     border-color: var(--lightgreen);
     background-color: rgba(255, 255, 255, 0.5) !important;
@@ -550,7 +550,7 @@ section {
 }
 
 @media (max-width: 767px) { 
-  #testimonialCarousel .card {
+  #testimonialCarousel .card, #packageCarousel .card {
     min-height: 450px !important;  /* adjust as needed */
   }
 }
@@ -567,11 +567,11 @@ section {
 }
 
 @media (min-width: 768px) {  
-  #testimonialCarousel .carousel-control-prev {
+  #testimonialCarousel .carousel-control-prev, #packageCarousel .carousel-control-prev {
       left: -10% !important; /* move it outward */
   }
 
-  #testimonialCarousel .carousel-control-next {
+  #testimonialCarousel .carousel-control-next, #packageCarousel .carousel-control-next  {
       right: -10% !important; /* move it outward */
   }
 }
