@@ -171,7 +171,7 @@
           <!-- Question -->
           <div class="mb-3">
             <label for="testimonial" class="form-label">Your Testimonial</label>
-            <textarea class="form-control" id="testimonial" name="testimonial" rows="3" required></textarea>
+            <textarea class="form-control" id="testimonial" name="testimonial" rows="5" required></textarea>
           </div>
           <!-- Name -->
           <div class="mb-3">

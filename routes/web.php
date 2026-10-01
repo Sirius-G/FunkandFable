@@ -67,7 +67,7 @@ Route::get('/admin/video/{id}', [HomeController::class, 'video_edit'])->name('vi
 Route::put('/admin/video/{id}', [HomeController::class, 'video_update'])->name('video.update');
 Route::delete('/admin/video/{id}/delete', [HomeController::class, 'video_delete'])->name('video.delete');
 Route::patch('/admin/video/{id}/restore', [HomeController::class, 'video_restore'])->name('video.restore');
-
+Route::post('/videos', [HomeController::class, 'video_store'])->name('videos.store');
 //Images
 Route::get('/admin/banner/{id}', [HomeController::class, 'banner_edit'])->name('banner.edit');
 Route::post('/admin/banner', [HomeController::class, 'update_banner'])->name('banner.update');

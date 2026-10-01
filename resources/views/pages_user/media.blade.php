@@ -50,7 +50,7 @@
                     <!-- Thumbnail Grid -->
                     <div class="row">
                         @foreach($videos as $video)
-                            <div class="col-3 col-md-2 mb-4 text-center">
+                            <div class="col-3 col-md-4 mb-4 text-center">
                                 <img
                                 src="https://img.youtube.com/vi/{{ $video->youtube_id }}/hqdefault.jpg"
                                 class="img-fluid video-thumb video_thumb"

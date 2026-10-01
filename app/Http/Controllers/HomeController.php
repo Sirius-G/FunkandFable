@@ -426,6 +426,19 @@ class HomeController extends Controller
         return view('pages_admin.edit_videos')->with('videos', $videos);
     }
 
+    public function video_store(Request $request)
+    {
+        $validated = $request->validate([
+            'youtube_id' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'max:255'],
+        ]);
+
+        Video::create($validated);
+
+        return redirect()->route('admin.videos')
+                         ->with('success', 'Video uploaded successfully.');
+    }
+
     public function video_edit($id)
     {
         // Include soft-deleted video in case we want to edit them
@@ -445,8 +458,8 @@ class HomeController extends Controller
             'title' => 'required|string',
         ]);
         
-        // Update the testimonial
-        $testimonial->update([
+        // Update the video
+        $video->update([
             'youtube_id' => $request->youtube_id,
             'title' => $request->title,
         ]);

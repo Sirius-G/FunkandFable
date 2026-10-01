@@ -1,6 +1,26 @@
 @extends('layouts.loadingpage')
 
 @section('content')
+
+@php
+    use App\Models\Banners;
+    $banner = DB::table('banners')->where('id', 1)->first();
+@endphp
+
+<style>
+    .logocontainer {
+          position: relative;
+          left: 0px;
+          top: 0px;
+          background: url("{{ asset('images/' . $banner->image_name) }}");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+          z-index: 0;
+    }
+</style>
+
 <div class="logocontainer text-center">
     <div class="cover">
       <img src="{{asset('/images/svg/F&FLogoLinear.svg')}}" class="logolinear" alt="Funk and Fable logo">

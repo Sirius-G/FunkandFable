@@ -7,14 +7,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6 p-4 my-4 services_border">
+        <div class="col-sm-12 col-md-6 p-4 my-4"> <!--css services_border-->
             <h1 class="inform_text pt-4 mt-4"><u>Services</u></h1>
-            <h2 class="inform_text pt-4 mt-4">{!! $offer->sections['section1'] ?? '' !!}</h2>
+            <h2><strong>{!! $offer->sections['section1'] ?? '' !!}</strong></h2>
             <p class="logo_sub_text">{!! $offer->sections['section2'] ?? '' !!}</p>
             <p class="logo_sub_text">{!! $offer->sections['section3'] ?? '' !!}</p>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <img src="/images/svg/divider.png" alt="Funk and Fable logo" width="100%" class="my-2">
-            </div>
+            </div> -->
         </div>
         <div class="col-sm-12 col-md-6 p-4 my-4">
             <div class="text-center">

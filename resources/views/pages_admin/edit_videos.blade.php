@@ -5,6 +5,29 @@
 <div class="container">
     <h1>Videos</h1>
 
+    <hr>
+    <h2>Add a new video</h2>
+        <form action="{{ route('videos.store') }}" method="POST">
+        @csrf
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4">
+                <label for="youtube_id">YouTube ID</label>
+                <input type="text" class="form-control" name="youtube_id" id="youtube_id" placeholder="Enter YouTube video ID" required>
+            </div>   
+            <div class="col-12 col-sm-12 col-md-4">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Enter a video title" required>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 pt-4">
+                <button type="submit" class="btn btn-success btn-sm px-4 py-2 rounded-3 shadow-sm hover-button btn-sm">Add Video</button>
+            </div>
+        </div>
+    </form>
+
+    <hr>
+
+    <h2>Edit an existing video</h2>
+
     @if($videos->count())
         <ul class="list-group p-4">
             <div class="row">
