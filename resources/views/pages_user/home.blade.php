@@ -122,7 +122,10 @@
                     <div class="raw-testimonial d-none">
                         <div class="card shadow-sm h-100 border-1">
                             <div class="card-body d-flex flex-column justify-content-center">
-                                <p class="card-text">"{{ $testimonial->testimonial }}"</p>
+                                <p class="card-text">
+                                  <i class="fa" style="color: #aaa; font-size: 80px;">&#xf10d;</i><br>
+                                    {{ $testimonial->testimonial }}
+                                </p>
                                 <small class="card-text mt-3 mb-0">— {{ $testimonial->added_by }}</small>
                             </div>
                         </div>

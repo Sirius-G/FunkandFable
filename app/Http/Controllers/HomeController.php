@@ -331,7 +331,7 @@ class HomeController extends Controller
 
         // Validate incoming request
         $request->validate([
-            'question' => 'required|string|max:255',
+            'question' => 'required|string|max:500',
             'answer' => 'required|string',
         ]);
 
@@ -404,7 +404,7 @@ class HomeController extends Controller
 
         // Validate incoming request
         $request->validate([
-            'testimonial' => 'required|string|max:255',
+            'testimonial' => 'required|string|max:2000',
             'added_by' => 'required|string',
             'confirmation' => 'required',
         ]);
@@ -570,7 +570,7 @@ class HomeController extends Controller
 
         // Validate incoming request
         $request->validate([
-            'package' => 'required|string|max:255',
+            'package' => 'required|string',
             'added_by' => 'required|string',
             'confirmation' => 'required',
         ]);
@@ -582,7 +582,7 @@ class HomeController extends Controller
             'confirmation' => $request->confirmation,
         ]);
 
-        return redirect()->route('admin.services')
+        return redirect()->route('admin.packages')
                          ->with('success', 'Packages updated successfully.');
     }
 

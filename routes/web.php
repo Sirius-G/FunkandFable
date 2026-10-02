@@ -61,13 +61,19 @@ Route::get('/admin/testimonials', [HomeController::class, 'admin_testimonials'])
 Route::get('/admin/testimonial/{id}', [HomeController::class, 'testimonial_edit'])->name('testimonial.edit');
 Route::put('/admin/testimonial/{id}', [HomeController::class, 'testimonial_update'])->name('testimonial.update');
 
+//Packages
+Route::get('/admin/packages', [HomeController::class, 'admin_packages'])->name('admin.packages');
+Route::get('/admin/package/{id}', [HomeController::class, 'package_edit'])->name('package.edit');
+Route::put('/admin/package/{id}', [HomeController::class, 'package_update'])->name('package.update');
+
+
 //Videos
 Route::get('/admin/videos', [HomeController::class, 'admin_videos'])->name('admin.videos');
 Route::get('/admin/video/{id}', [HomeController::class, 'video_edit'])->name('video.edit');
 Route::put('/admin/video/{id}', [HomeController::class, 'video_update'])->name('video.update');
 Route::delete('/admin/video/{id}/delete', [HomeController::class, 'video_delete'])->name('video.delete');
 Route::patch('/admin/video/{id}/restore', [HomeController::class, 'video_restore'])->name('video.restore');
-Route::post('/videos', [HomeController::class, 'video_store'])->name('videos.store');
+Route::post('/video_store', [HomeController::class, 'video_store'])->name('videos.store');
 //Images
 Route::get('/admin/banner/{id}', [HomeController::class, 'banner_edit'])->name('banner.edit');
 Route::post('/admin/banner', [HomeController::class, 'update_banner'])->name('banner.update');

@@ -91,8 +91,9 @@
             <h6 class="collapse-header">Sections:</h6>
             <a  class="collapse-item" href="/admin/banner/3"><i class="fas fa-fw fa-edit"></i> Services Image <i class="fas fa-fw fa-image"></i></a>
             <a class="collapse-item" href="/admin/4/edit"><i class="fas fa-fw fa-edit"></i> Services Overview</a>
-            <a class="collapse-item" href="/admin/5/edit"><i class="fas fa-fw fa-edit"></i> Services1</a>
-            <a class="collapse-item" href="/admin/6/edit"><i class="fas fa-fw fa-edit"></i> Service2</a>
+            <!-- <a class="collapse-item" href="/admin/5/edit"><i class="fas fa-fw fa-edit"></i> Services1</a>
+            <a class="collapse-item" href="/admin/6/edit"><i class="fas fa-fw fa-edit"></i> Service2</a> -->
+            <a class="collapse-item" href="/admin/packages"><i class="fas fa-fw fa-edit"></i> Packages</a>
           </div>
         </div>
       </li>
