@@ -581,34 +581,51 @@ section {
   font-size: 12px !important;
 }
 
+#videoThumbnailCarousel {
+    position: relative;
+}
+
 #videoThumbnailCarousel .carousel-control-prev,
 #videoThumbnailCarousel .carousel-control-next {
+    position: absolute !important;
+
     top: 70% !important;
     bottom: auto !important;
+
     height: 60px !important;
-    transform: none !important;
+    width: 50px !important;
+
+    margin: 0 !important;
+
+    transform: translateY(0) !important;
     transition: none !important;
+
+    z-index: 10 !important;
 }
 
+/* Left arrow */
 #videoThumbnailCarousel .carousel-control-prev {
-    margin-left: -110px;
+    left: -110px !important;
+    right: auto !important;
 }
 
+/* Right arrow */
 #videoThumbnailCarousel .carousel-control-next {
-    margin-right: -110px;
+    right: -110px !important;
+    left: auto !important;
 }
 
 
-/* Hide Bootstrap's default arrows */
+/* Remove Bootstrap's arrow images */
 #videoThumbnailCarousel .carousel-control-prev-icon,
 #videoThumbnailCarousel .carousel-control-next-icon {
     background-image: none !important;
-    width: 0;
-    height: 0;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 
-/* LEFT pointing triangle */
+/* Left triangle */
 #videoThumbnailCarousel .carousel-control-prev-icon {
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
@@ -616,9 +633,51 @@ section {
 }
 
 
-/* RIGHT pointing triangle */
+/* Right triangle */
 #videoThumbnailCarousel .carousel-control-next-icon {
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
     border-left: 28px solid white;
+}
+
+@media (max-width: 767.98px) {
+
+    #videoThumbnailCarousel .carousel-control-prev,
+    #videoThumbnailCarousel .carousel-control-next {
+        top: 70% !important;
+        bottom: auto !important;
+        height: 50px !important;
+        width: 40px !important;
+
+        margin: 0 !important;
+        transform: translateY(0) !important;
+        transition: none !important;
+
+        z-index: 20 !important;
+    }
+
+    /* Left arrow */
+    #videoThumbnailCarousel .carousel-control-prev {
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    /* Right arrow */
+    #videoThumbnailCarousel .carousel-control-next {
+        right: 0 !important;
+        left: auto !important;
+    }
+
+    /* Smaller mobile triangles */
+    #videoThumbnailCarousel .carousel-control-prev-icon {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 18px solid white;
+    }
+
+    #videoThumbnailCarousel .carousel-control-next-icon {
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 18px solid white;
+    }
 }
