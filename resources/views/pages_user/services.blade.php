@@ -16,14 +16,12 @@
                 <img src="/images/svg/divider.png" alt="Funk and Fable logo" width="100%" class="my-2">
             </div> 
         </div>
-        <div class="col-sm-12 col-md-6 p-4 my-4">
-            <div class="text-center">
-                @if(count($banner)>0)
-                @foreach($banner as $b)
-                    <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%">
-                @endforeach
-                @endif
-            </div>
+        <div class="col-sm-12 col-md-6 text-center py-4 my-4">
+            @if(count($banner)>0)
+            @foreach($banner as $b)
+                <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%">
+            @endforeach
+            @endif
         </div>
       </div>
     </div>
