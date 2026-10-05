@@ -47,7 +47,7 @@
                 </div>
 
 
-                    <!-- Thumbnail Grid -->
+                    <!-- Thumbnail Grid
                     <div class="row">
                         @foreach($videos as $video)
                             <div class="col-3 col-md-4 mb-4 text-center">
@@ -58,6 +58,60 @@
                                 <hr><p class="mt-2">{{ $video->title }}</p>
                             </div>
                         @endforeach
+                    </div> -->
+                    <!-- Thumbnail Carousel -->
+                    <div id="videoThumbnailCarousel" class="carousel slide" data-bs-interval="false">
+
+                        <div class="carousel-inner">
+
+                            @foreach($videos->chunk(3) as $chunkIndex => $videoChunk)
+
+                                <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+
+                                    <div class="row">
+
+                                        @foreach($videoChunk as $video)
+
+                                            <div class="col-4 mb-4 text-center">
+
+                                                <img
+                                                    src="https://img.youtube.com/vi/{{ $video->youtube_id }}/hqdefault.jpg"
+                                                    class="img-fluid video-thumb video_thumb"
+                                                    data-video="{{ $video->youtube_id }}"
+                                                    style="cursor: pointer;"
+                                                >
+
+                                                <hr>
+                                                <p class="mt-2">{{ $video->title }}</p>
+
+                                            </div>
+
+                                        @endforeach
+
+                                    </div>
+
+                                </div>
+
+                            @endforeach
+
+                        </div>
+
+                        <!-- Previous -->
+                        <button class="carousel-control-prev" type="button"
+                                data-bs-target="#videoThumbnailCarousel"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <!-- Next -->
+                        <button class="carousel-control-next" type="button"
+                                data-bs-target="#videoThumbnailCarousel"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
                     </div>
                     <hr>
                 </div>
