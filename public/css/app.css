@@ -581,51 +581,34 @@ section {
   font-size: 12px !important;
 }
 
-#videoThumbnailCarousel {
-    position: relative;
-}
-
 #videoThumbnailCarousel .carousel-control-prev,
 #videoThumbnailCarousel .carousel-control-next {
-    position: absolute !important;
-
     top: 70% !important;
     bottom: auto !important;
-
     height: 60px !important;
-    width: 50px !important;
-
-    margin: 0 !important;
-
-    transform: translateY(0) !important;
+    transform: none !important;
     transition: none !important;
-
-    z-index: 10 !important;
 }
 
-/* Left arrow */
 #videoThumbnailCarousel .carousel-control-prev {
-    left: -110px !important;
-    right: auto !important;
+    margin-left: -110px;
 }
 
-/* Right arrow */
 #videoThumbnailCarousel .carousel-control-next {
-    right: -110px !important;
-    left: auto !important;
+    margin-right: -110px;
 }
 
 
-/* Remove Bootstrap's arrow images */
+/* Hide Bootstrap's default arrows */
 #videoThumbnailCarousel .carousel-control-prev-icon,
 #videoThumbnailCarousel .carousel-control-next-icon {
     background-image: none !important;
-    width: 0 !important;
-    height: 0 !important;
+    width: 0;
+    height: 0;
 }
 
 
-/* Left triangle */
+/* LEFT pointing triangle */
 #videoThumbnailCarousel .carousel-control-prev-icon {
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
@@ -633,7 +616,7 @@ section {
 }
 
 
-/* Right triangle */
+/* RIGHT pointing triangle */
 #videoThumbnailCarousel .carousel-control-next-icon {
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
