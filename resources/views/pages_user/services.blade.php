@@ -20,7 +20,7 @@
             <div class="text-center">
                 @if(count($banner)>0)
                 @foreach($banner as $b)
-                    <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="72%">
+                    <img src="images/{{$b->image_name}}" alt="{{$b->alt}}" width="100%">
                 @endforeach
                 @endif
             </div>
