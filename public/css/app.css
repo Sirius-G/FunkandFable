@@ -586,12 +586,39 @@ section {
     top: 70% !important;
     bottom: auto !important;
     height: 60px !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 #videoThumbnailCarousel .carousel-control-prev {
-  margin-left: -110px;
+    margin-left: -110px;
 }
 
 #videoThumbnailCarousel .carousel-control-next {
-  margin-right: -110px;
+    margin-right: -110px;
+}
+
+
+/* Hide Bootstrap's default arrows */
+#videoThumbnailCarousel .carousel-control-prev-icon,
+#videoThumbnailCarousel .carousel-control-next-icon {
+    background-image: none !important;
+    width: 0;
+    height: 0;
+}
+
+
+/* LEFT pointing triangle */
+#videoThumbnailCarousel .carousel-control-prev-icon {
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 28px solid white;
+}
+
+
+/* RIGHT pointing triangle */
+#videoThumbnailCarousel .carousel-control-next-icon {
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 28px solid white;
 }
