@@ -580,3 +580,18 @@ section {
 .collapse-item {
   font-size: 12px !important;
 }
+
+#videoThumbnailCarousel .carousel-control-prev,
+#videoThumbnailCarousel .carousel-control-next {
+    top: 70% !important;
+    bottom: auto !important;
+    height: 60px !important;
+}
+
+#videoThumbnailCarousel .carousel-control-prev {
+  margin-left: -110px;
+}
+
+#videoThumbnailCarousel .carousel-control-next {
+  margin-right: -110px;
+}
